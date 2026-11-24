@@ -1,6 +1,6 @@
 # EEG Cognitive State Decoding for Industrial BCI — 2026 Competition-队长不让叫南脑一号队
 
-[完整复现指南](docs/reproducibility.md) · [发布报告](reports/github_release_report.md)
+[完整复现指南](docs/reproducibility.md) · [完整项目报告](docs/Technical_Proposal.md) 
 
 面向工业场景单通道EEG的relax/task二分类研究代码：250 Hz，输入微伏，relax=0、task=1，输出连续`P(task)`。
 仓库包含决赛正式模型**H1x5**，初赛R0 LAG-EnergyProto、D2在线适应和早期严格窗口/切换期研究。
