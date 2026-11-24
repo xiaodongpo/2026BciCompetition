@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-23",
+  "repository": "https://github.com/xiaodongpo/2026BciCompetition",
+  "visibility": "public",
+  "license": "MIT",
+  "final_weights": true,
+  "github_release": false,
+  "published_model_files": 34,
+  "published_model_bytes": 52228136,
+  "excluded": [
+    "raw EEG",
+    "event CSV labels",
+    "third-party pretrained weights",
+    "private credentials",
+    "runtime caches",
+    "internal conversations"
+  ],
+  "authorization": "Explicit repository-owner instruction in the current session"
+}

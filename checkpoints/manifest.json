@@ -4,105 +4,150 @@
     "filename": "energy_seed2024.pth",
     "bytes": 112314,
     "sha256": "e1dc9f5e7f8edfd3734445ab41acc6ae85b3778ee0f3d053f66f54448e61d044",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/r0/energy_seed2024.pth"
   },
   {
     "route": "r0",
     "filename": "energy_seed3407.pth",
     "bytes": 112314,
     "sha256": "d836a28472f766921335abba974f9cc199e3d5595ffa10cdf300f70718763d6a",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/r0/energy_seed3407.pth"
   },
   {
     "route": "r0",
     "filename": "energy_seed42.pth",
     "bytes": 112268,
     "sha256": "08b41834d35291abcbca3dbc2d70a5f80fbdbab4f40e5d70bf67798da2d8150b",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/r0/energy_seed42.pth"
   },
   {
     "route": "r0",
     "filename": "lightgbm.txt",
     "bytes": 382150,
     "sha256": "51fc335d883f183910477e4d439232dd17f557e919a36c9c57f1a72319a6fa8d",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/r0/lightgbm.txt"
   },
   {
     "route": "r0",
     "filename": "statistics.npz",
     "bytes": 14536,
     "sha256": "9978703ca94d21703137104673c8a816bfdade1429a37cd887b4e877d8928480",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/r0/statistics.npz"
   },
   {
     "route": "d2",
     "filename": "m0_lgb_0.txt",
     "bytes": 2952761,
     "sha256": "7754b75f7c2c7d825c262c9d5bd55e610b161a9affd19e282cad3ecd935c3440",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m0_lgb_0.txt"
   },
   {
     "route": "d2",
     "filename": "m0_lgb_1.txt",
     "bytes": 2952000,
     "sha256": "ebeffce41e3e9e8214f196cd53e9ef30f4c23b6a3d424a2260716e8e80361506",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m0_lgb_1.txt"
   },
   {
     "route": "d2",
     "filename": "m0_lgb_2.txt",
     "bytes": 2952397,
     "sha256": "8821535c36ceb5762d16293fe233f75181d9504fee9c5e937c59bc273264ef87",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m0_lgb_2.txt"
   },
   {
     "route": "d2",
     "filename": "m0_lgb_3.txt",
     "bytes": 2952239,
     "sha256": "c88de5cd69f1b0ae13ae1354b71d62b67cec07fde1221c1564f893a97ce5078a",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m0_lgb_3.txt"
   },
   {
     "route": "d2",
     "filename": "m0_lgb_4.txt",
     "bytes": 2952529,
     "sha256": "79f466873413c2d73697996426a931c76784135246a3c8f3db1411dbbca69291",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m0_lgb_4.txt"
   },
   {
     "route": "d2",
     "filename": "m1_lgb_0.txt",
     "bytes": 2926115,
     "sha256": "8d785341f2125a1b43877648c4f0818037dc04172d2b54130aea61af7c0e0dfa",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m1_lgb_0.txt"
   },
   {
     "route": "d2",
     "filename": "m1_lgb_1.txt",
     "bytes": 2926190,
     "sha256": "2588bb66f09b80fd5dbc57324250db8b883f5bfcc9ccf510424139c483702f0a",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m1_lgb_1.txt"
   },
   {
     "route": "d2",
     "filename": "m1_lgb_2.txt",
     "bytes": 2926075,
     "sha256": "e33ca3f80fc0f35bf9d2c3d46aa1a5b68c798ef5ed0164884b2cba837febbb92",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m1_lgb_2.txt"
   },
   {
     "route": "d2",
     "filename": "m1_lgb_3.txt",
     "bytes": 2926163,
     "sha256": "25a235aa486cf20e12735c00ccc1d13abd18da209d795210eebdaa06fbc11a56",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m1_lgb_3.txt"
   },
   {
     "route": "d2",
     "filename": "m1_lgb_4.txt",
     "bytes": 2926017,
     "sha256": "c20b640e9ea1258841efe2d9e6c9e335e5f4d0b086a78520ceb1d5f1393bd279",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/m1_lgb_4.txt"
   },
   {
     "route": "third_party",
@@ -123,132 +168,189 @@
     "filename": "config.json",
     "bytes": 36786,
     "sha256": "b0f04036f73de643c2229f695acff79c0cb6d9157c057914639034e4677240f7",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/config.json"
   },
   {
     "route": "h1",
     "filename": "m0_lgb_0.txt",
     "bytes": 2946953,
     "sha256": "764fc7c8d8caef212806b5c875329ae0616257fa760d72df14fe66f1a7586c84",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m0_lgb_0.txt"
   },
   {
     "route": "h1",
     "filename": "m0_lgb_1.txt",
     "bytes": 2946524,
     "sha256": "1632d62784a33e9256f430d2795aa6ca3f43964f493e8f1e6b7f7d51810c7595",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m0_lgb_1.txt"
   },
   {
     "route": "h1",
     "filename": "m0_lgb_2.txt",
     "bytes": 2946777,
     "sha256": "de6e4261952a10b8e65175486c7499ec174cd6f9106a3d7847201c536c8afbc9",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m0_lgb_2.txt"
   },
   {
     "route": "h1",
     "filename": "m1_lgb_0.txt",
     "bytes": 2927252,
     "sha256": "2daf383b1bbaef0a5d27ee133c48d44d0be0e7ccd4a1efeea311b6609a4231d1",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m1_lgb_0.txt"
   },
   {
     "route": "h1",
     "filename": "m1_lgb_1.txt",
     "bytes": 2927164,
     "sha256": "64155be4000313ef9615407038d199c2f46214865e87ed12ec3e85ccda1ec10e",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m1_lgb_1.txt"
   },
   {
     "route": "h1",
     "filename": "m1_lgb_2.txt",
     "bytes": 2927281,
     "sha256": "37852effe2259811f829c4617e50c74d83c187dbad8f657112fcf09aa5480e77",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m1_lgb_2.txt"
   },
   {
     "route": "h1",
     "filename": "m2_seed0.pt",
     "bytes": 441073,
     "sha256": "16bd5afee6df85394cceb24bd766758d4d24c69bd6c01ba43ba876acf8b301cd",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m2_seed0.pt"
   },
   {
     "route": "h1",
     "filename": "m2_seed1.pt",
     "bytes": 441073,
     "sha256": "8b2692bd00f98ab97c3e6bf32a1bebba335c09d11a89a64b81811f83f9d990d4",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m2_seed1.pt"
   },
   {
     "route": "h1",
     "filename": "m2_seed2.pt",
     "bytes": 441073,
     "sha256": "7a1237e1e1d869ed0cfade9e49b02cd60b13d1ac1075d6a2d8bbff4e83890376",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m2_seed2.pt"
   },
   {
     "route": "h1",
     "filename": "m2_seed3.pt",
     "bytes": 441073,
     "sha256": "752d619318888dac5a3f14946f46646e203215ea5c5371dd265af3557d3f823f",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m2_seed3.pt"
   },
   {
     "route": "h1",
     "filename": "m2_seed4.pt",
     "bytes": 441073,
     "sha256": "d60ddad147e85c65771a933bf7168979e5e2e14a6740f05d8da86bb3e973e0fa",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m2_seed4.pt"
   },
   {
     "route": "h1",
     "filename": "m3_seed0.pt",
     "bytes": 441073,
     "sha256": "5bd1ba041086a64cdcc1df28f692c7d0453cd9d905afc0fd697f9810f66b8b5b",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m3_seed0.pt"
   },
   {
     "route": "h1",
     "filename": "m3_seed1.pt",
     "bytes": 441073,
     "sha256": "a69d9273988d7d1f54b1224820b5f8a462e70ea8d7dab93e55dcf883d036a5a3",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m3_seed1.pt"
   },
   {
     "route": "h1",
     "filename": "m3_seed2.pt",
     "bytes": 441073,
     "sha256": "2dda0fb04526dcae09e782485ffa0d7dcee811a0bcd3ae9335f3d34b8ab9c723",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m3_seed2.pt"
   },
   {
     "route": "h1",
     "filename": "m3_seed3.pt",
     "bytes": 441073,
     "sha256": "4e6349a76455788181df2cb41b7a46b96af360d93acc69ad98275424b26effed",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m3_seed3.pt"
   },
   {
     "route": "h1",
     "filename": "m3_seed4.pt",
     "bytes": 441073,
     "sha256": "603a297bcd67407f4bdf212e56959860a3bff8f7aa1807ca03fdd23291831b41",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/h1/m3_seed4.pt"
   },
   {
     "route": "r0",
     "filename": "config.json",
     "bytes": 1404,
     "sha256": "03d5bcd64b8b7272e0d6f18afae1151677b845c3226d1550e33af565e815e5b7",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/r0/config.json"
   },
   {
     "route": "d2",
     "filename": "config.json",
     "bytes": 31197,
     "sha256": "e2f7f8bc338c4081412716f1fb08d7f4fd31d2eb305aea023d3c02fc97765e43",
-    "redistribution": "not authorized; excluded"
+    "redistribution": "owner approved public distribution under repository MIT license",
+    "owner_approved": true,
+    "approval_date": "2026-11-23",
+    "published_path": "checkpoints/d2/config.json"
   }
 ]

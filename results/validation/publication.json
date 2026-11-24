@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "environment": "isolated Windows CPU venv",
+  "tests": 17,
+  "seconds": 45.108,
+  "log_sha256": "93a4655709a2be682cd9238a1eb3240532fec1f459b4ebacff9b16ab97450417",
+  "junit_sha256": "a5d3462a71c031c7166bada9b9b86aa349900dc8792ba9c6868fb0a55ccb204c",
+  "approved_model_files": 34,
+  "approved_model_bytes": 52228136,
+  "h1_final_bundle_synthetic_check": {
+    "status": "PASS",
+    "synthetic_input": true,
+    "order_independence": true,
+    "reference_order_independence": true,
+    "cache_isolation": true,
+    "filter_future_invariance": true,
+    "filter_unit_dc_gain": true,
+    "neutral_bad_window": true,
+    "reference_fallback": true,
+    "model_files_unchanged": true,
+    "scores": [
+      0.09770391571833922,
+      0.10593356625721757,
+      0.11645447305310769,
+      0.12828373362003154
+    ],
+    "competition_metrics_reproduced": false,
+    "training_losses": null,
+    "existing_weights": true,
+    "recipe": "H1x5"
+  },
+  "full_competition_metrics_rerun": false
+}

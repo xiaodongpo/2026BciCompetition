@@ -1,9 +1,10 @@
 {
   "status": "PASS",
-  "files": 297,
-  "bytes": 1270827,
+  "files": 334,
+  "bytes": 53518041,
   "findings": [],
-  "scope": "current publishable files; runtime caches are excluded and must not enter Git",
-  "license_owner_approval_pending": true,
-  "git_remote_mutations_performed": false
+  "approved_model_files": 34,
+  "scope": "current publishable files; only owner-approved exact model hashes are allowed; raw data and runtime caches remain excluded",
+  "license_owner_approval_pending": false,
+  "publication_authorized": true
 }

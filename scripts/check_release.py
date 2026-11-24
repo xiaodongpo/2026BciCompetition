@@ -1,5 +1,5 @@
 """Read-only checks of publishable files. Never prints matched secret values."""
-import ast,json,re,sys
+import ast,hashlib,json,re,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 SKIP={'.git','.venv','__pycache__','.pytest_cache','cache','workspace','EEG_dataset','test_results','experiments','pretrained'}
@@ -24,10 +24,20 @@ def public_files():
 
 def scan():
     errors=[];files=list(public_files())
+    approved={}
+    for row in json.loads((ROOT/'checkpoints/manifest.json').read_text()):
+        if row.get('published_path') and row.get('owner_approved') is True:
+            approved[row['published_path']]=row
+    for rel,row in approved.items():
+        p=ROOT/rel
+        if not p.is_file():errors.append(dict(file=rel,kind='approved_model_missing'))
+        elif p.stat().st_size!=row['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=row['sha256']:
+            errors.append(dict(file=rel,kind='approved_model_hash_mismatch'))
     for p in files:
         rel=p.relative_to(ROOT).as_posix()
         if p.suffix.lower() in PRIVATE_SUFFIX or p.name.endswith('_events.csv') or p.name.startswith('.env'):
-            errors.append(dict(file=rel,kind='private_artifact'));continue
+            if rel not in approved:errors.append(dict(file=rel,kind='private_artifact'))
+            continue
         if p.stat().st_size>5*1024**2:errors.append(dict(file=rel,kind='large_file'))
         try:t=p.read_text(encoding='utf-8-sig')
         except UnicodeError:errors.append(dict(file=rel,kind='unreviewed_binary'));continue
@@ -42,7 +52,7 @@ def scan():
                 target=link.split('#')[0]
                 if not target or '://' in target or target.startswith('mailto:'):continue
                 if not (p.parent/target).exists():errors.append(dict(file=rel,kind='broken_link',target=target))
-    return dict(status='PASS' if not errors else 'FAIL',files=len(files),bytes=sum(p.stat().st_size for p in files),findings=errors,scope='current publishable files; runtime caches are excluded and must not enter Git',license_owner_approval_pending='PENDING' in (ROOT/'LICENSE').read_text())
+    return dict(status='PASS' if not errors else 'FAIL',files=len(files),bytes=sum(p.stat().st_size for p in files),findings=errors,approved_model_files=len(approved),scope='current publishable files; only owner-approved exact model hashes are allowed; raw data and runtime caches remain excluded',license_owner_approval_pending='PENDING' in (ROOT/'LICENSE').read_text())
 
 if __name__=='__main__':
     report=scan();print(json.dumps(report,indent=2));sys.exit(bool(report['findings']))

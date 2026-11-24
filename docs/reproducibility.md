@@ -1,9 +1,9 @@
 # 从源码到验证结果
 
-这是本地发布候选。目标GitHub地址、代码许可、模型再分发权限尚待确认；当前没有可声称已发布的仓库URL。以下使用用户提供的真实地址替换占位值：
+所有者已确认公开仓库、MIT及最终权重分发；不创建GitHub Release。克隆地址如下：
 
 ```powershell
-$RepoUrl = 'REPLACE_WITH_CONFIRMED_GITHUB_URL'
+$RepoUrl = 'https://github.com/xiaodongpo/2026BciCompetition.git'
 git clone $RepoUrl industrial-eeg
 cd industrial-eeg
 ```
@@ -17,7 +17,7 @@ cd industrial-eeg
 5. 取得合法比赛数据，按[数据说明](dataset.md)存放。`python scripts/validate_data.py --data-root /path/to/authorized_data --output cache/data_manifest.json`只读检查57记录、BDF/事件结构并记录SHA-256。该文件含原始文件元数据，应留在本地。核对对应路线的数据版本，不能混用原始与修订数据。
 6. 按[训练说明](training.md)建立H1两类缓存。先用[评价说明](evaluation.md)的逐折命令重建46记录开发集H1（五折、每类网络三种子），按记录等权汇总，保留每次运行配置、划分、模型、预测与耗时。不要查看锁箱以决定新参数。
 7. 最终配置已经冻结在`routes/h1/configs/fin_recipes.json`。执行H1x5两类网络各五种子、全57记录拟合与树模型导出命令。**最终全量模型不再有这57记录中的独立留出集**。本次整理不重开模型选择。
-8. 使用自己的新模型时保留训练生成的配置与全部模型文件。若取得已授权原模型，运行`python scripts/verify_weights.py --route h1 --model /path/to/model`核对历史清单；自行重训的权重不要求与历史SHA逐字节相同。
+8. 使用自己的新模型时保留训练生成的配置与全部模型文件。仓库自带已授权原模型，运行`python scripts/verify_weights.py --route h1 --model checkpoints/h1`核对历史清单；自行重训的权重不要求与历史SHA逐字节相同。
 9. 按[推理说明](inference.md)设置`FIN_MODEL_DIR`并调用H1接口，或运行R0连续流CLI。可用`python scripts/h1_synthetic_smoke.py --model /path/to/model --out cache/h1_bundle_check`对完整H1模型做合成接口测试。
 10. 真实评价保存每记录指标、参考种子14/15/16及预测，再按协议汇总。结果与[历史实验](experiments.md)分开保存，记录软件/硬件、数据哈希和配置差异，不覆盖原表。
 

@@ -1,6 +1,6 @@
 # 推理接口
 
-所有接口以微伏输入单通道250 Hz EEG；高分代表task。权重未获再分发授权，默认不随仓库提供。可先执行合成冒烟训练产生接口测试用权重，或按训练文档生成正式模型。
+所有接口以微伏输入单通道250 Hz EEG；高分代表task。经所有者授权，完整H1x5/R0/D2权重分别随仓库存放于`checkpoints/h1`、`checkpoints/r0`、`checkpoints/d2`。也可执行合成冒烟训练或按训练文档自行训练。
 
 ## H1x5 决赛主方案
 
@@ -10,7 +10,7 @@
 import os, sys
 from pathlib import Path
 sys.path.insert(0, str(Path('routes/h1/finals/submission').resolve()))
-os.environ['FIN_MODEL_DIR'] = str(Path('routes/h1/checkpoints/fin/H1x5_all').resolve())
+os.environ['FIN_MODEL_DIR'] = str(Path('checkpoints/h1').resolve())
 import solution
 # window: (1500,), reference: (10,7500), both from the same causally filtered record.
 score = solution.predict(window, reference)

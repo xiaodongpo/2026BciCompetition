@@ -4,7 +4,7 @@
 
 Single-channel EEG decoding at 250 Hz: relax=0, task=1, microvolt inputs and continuous `P(task)` outputs. The repository centers on the final **H1x5** submission and preserves the preliminary R0 LAG-EnergyProto model, adaptive D2, and earlier strict-window and transition studies.
 
-**Local release candidate; not yet published to GitHub.** Owner approval of the code license and contributor attribution is pending. Raw EEG, private labels, formal weights and internal conversations are excluded. Fourteen CPU tests passed in a new isolated environment. Small training/export/inference workflows were executed; full competition experiments were not rerun.
+**Code and final model bundles are MIT-licensed.** The [GitHub repository](https://github.com/xiaodongpo/2026BciCompetition) includes complete H1x5, R0 and D2 weights with owner approval. Raw EEG, private labels, third-party pretrained weights and internal conversations are excluded. CPU tests passed in an isolated environment and a clean clone. Small training/export/inference workflows were executed; full competition experiments were not rerun.
 
 ## Methods and support boundaries
 
@@ -21,9 +21,11 @@ Causality and bounded support are separate properties. Record IDs are not verifi
 
 ## Quick start
 
-The target repository URL is pending. After publication use `git clone <confirmed-repository-url>`; for now run from the prepared local checkout. PowerShell:
+Clone the repository and run the following PowerShell commands:
 
 ```powershell
+git clone https://github.com/xiaodongpo/2026BciCompetition.git
+cd 2026BciCompetition
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 $env:PYTHONUTF8 = '1'
@@ -32,6 +34,8 @@ python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/
 python -m pip install -r requirements-dev.txt
 python -m pip check
 python -m pytest -q
+python scripts/verify_weights.py --route h1 --model checkpoints/h1
+python scripts/h1_synthetic_smoke.py --model checkpoints/h1 --out cache/h1_final_check
 python scripts/h1_synthetic_smoke.py --out cache/h1_demo
 python scripts/synthetic_smoke.py --out cache/r0_demo
 python scripts/evaluate_predictions.py examples/sample_output/metric_fixture.csv
@@ -71,14 +75,16 @@ Do not rank different protocols against one another. H1/H2 average reference see
 
 ## Layout and evidence
 
-`routes/h1`, `routes/r0`, `routes/d2` and `routes/legacy` preserve isolated research namespaces. `scripts` provides launchers and synthetic/data/model/safety checks; `tests` contains CPU acceptance tests; `docs` contains detailed guides; `results` stores historical aggregates and sanitized execution evidence; `checkpoints` stores hashes only; `reports` stores the audit, source mapping and release report. `.github/workflows/ci.yml` defines Windows/Linux synthetic CPU checks.
+`routes/h1`, `routes/r0`, `routes/d2` and `routes/legacy` preserve isolated research namespaces. `scripts` provides launchers and synthetic/data/model/safety checks; `tests` contains CPU acceptance tests; `docs` contains detailed guides; `results` stores historical aggregates and sanitized execution evidence; `checkpoints` stores authorized final bundles and hashes; `reports` stores the audit, source mapping and release report. `.github/workflows/ci.yml` defines Windows/Linux synthetic CPU checks.
 
 Executed: independent venv installation and `pip check`, 14 tests, synthetic-input checks of actual H1x5 weights, read-only format/hash checks of 57 H1 records, and R0 training/export/reload on one real record. A fresh local Git clone without runtime caches also passed all 14 tests in 35.61 seconds. The R0 real-data run used the existing project environment; independent-environment tests used synthetic CPU workflows. Not executed: complete CV/search, new lockbox evaluation, hidden testing, new-environment GPU training, Linux or Actions. See [reproducibility](docs/reproducibility.md) for code/workflow/result distinctions.
 
 ## Weights, citation and licensing
 
-The [weight inventory](checkpoints/README.md) records size and SHA-256 for 36 model/config artifacts without distributing them. Train from authorized data or obtain permission from the rights holder; verify the complete bundle.
+The version including authorized weights passed 17 local tests in 45.12 seconds, plus a synthetic interface check using the actual `checkpoints/h1` bundle; see the [validation record](results/validation/publication.json).
 
-[LICENSE](LICENSE) is explicitly pending and grants no project-wide open-source license yet. MIT is proposed subject to owner and team rights confirmation. Original BIOT/SingLEM MIT notices are retained; weight permissions are separate. See [third-party notices](THIRD_PARTY_NOTICES.md). Competition data and organizer documents are not relicensed here.
+The [weight inventory](checkpoints/README.md) records 36 artifacts: 34 authorized H1x5/R0/D2 model and config files are included (52.2 MB); two third-party pretrained files remain excluded. Verify with `python scripts/verify_weights.py --route h1 --model checkpoints/h1` before loading.
 
-[CITATION.cff](CITATION.cff) is a software citation draft with contributor names, URL and formal version awaiting confirmation. No paper, DOI or competition ranking is invented. We acknowledge the organizers, team contributors and upstream open-source projects.
+The owner approved the [MIT license](LICENSE) and public distribution of the final bundles. Original BIOT/SingLEM MIT notices are retained; their pretrained weights remain excluded. See [third-party notices](THIRD_PARTY_NOTICES.md). Competition data and organizer documents are not relicensed here.
+
+[CITATION.cff](CITATION.cff) provides a software citation using the maintainer account and collective contributor attribution. No paper, DOI or competition ranking is invented. We acknowledge the organizers, team contributors and upstream open-source projects.
