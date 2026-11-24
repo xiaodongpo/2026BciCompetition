@@ -14,6 +14,7 @@
 | --- | --- | --- |
 | 新独立venv安装 | PASS；Python3.11.16、PyTorch2.7.1+cu128；CPU执行；pip check无冲突 | [环境JSON](../results/validation/environment.json)；从本地wheel缓存安装，无继承site-packages；全新在线下载未完成 |
 | 独立环境CPU测试 | 14 passed，76.05秒 | [测试JSON](../results/validation/tests.json)；包括嵌套legacy测试、H1/D2/R0合成训练及R0正式入口smoke |
+| 干净本地克隆 | 14 passed，35.61秒；无发布目录运行缓存 | [克隆验收](../results/validation/clean_checkout.json)；从初始Git提交克隆，使用同一独立venv；不是网络克隆测试 |
 | 实际H1x5权重 | 合成输入的顺序独立、参考重排、缓存隔离、坏窗回退、因果滤波与不改权重检查通过 | [原权重接口JSON](../results/validation/h1_original_weights.json)；原项目环境；不是泛化评价 |
 | 协议辅助工具替换 | 5种子×450123点，参考和乱序窗口数组逐元素一致 | [协议比对](../results/validation/protocol_equivalence.json)；与原示例的行为比对，不复制其文件 |
 | H1数据接口 | 57记录、114个BDF/事件文件格式及SHA核验通过 | [数据摘要](../results/validation/data_interface.json)；只读，不新算任何锁箱指标 |
@@ -43,6 +44,6 @@ CPU合成测试覆盖模型加载、特征维度、配置、优化、概率范�
 
 正式权重和拟合config均默认不公开，只记录36项哈希。原始数据/事件、个人路径、内部连接配置、会话、完整环境与原官方材料不进入候选历史。许可证仍为`PENDING OWNER CONFIRMATION`；BIOT/SingLEM原MIT通知保留，依赖许可另有元数据清单。建议确认原创/团队权利后选择MIT，未替所有者作最终决定。
 
-已具备干净本地仓库初始化及首个提交的内容条件；本地Git状态、提交SHA和最终文件数由同目录Git及私有交付回执记录，避免在提交文件内循环引用自身哈希。只读GitHub身份查询成功；未指定目标仓库，因此尚未核验其内容、分支与写权限。没有远程URL、推送、公开建库、Release或正式稳定标签。CI仅配置，尚未运行，不能贴已通过徽章。
+已建立本地main分支和初始提交`a346ae8`，并从该提交的干净克隆完成14项测试。后续提交仅补入克隆验收证据和相应文档。最终本地Git状态、提交SHA和文件数由同目录Git及私有交付回执记录，避免在提交文件内循环引用自身哈希。只读GitHub身份查询成功；未指定目标仓库，因此尚未核验其内容、分支与写权限。没有远程URL、推送、公开建库、Release或正式稳定标签。CI仅配置，尚未运行，不能贴已通过徽章。
 
 远程发布前待确认：目标GitHub URL、public/private、项目许可证与贡献者署名、是否允许单独分发最终权重、是否创建GitHub Release。该暂停点来自用户发布任务第13.5节的明确要求；本地准备与验收不需要再次授权。

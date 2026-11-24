@@ -73,7 +73,7 @@ Do not rank different protocols against one another. H1/H2 average reference see
 
 `routes/h1`, `routes/r0`, `routes/d2` and `routes/legacy` preserve isolated research namespaces. `scripts` provides launchers and synthetic/data/model/safety checks; `tests` contains CPU acceptance tests; `docs` contains detailed guides; `results` stores historical aggregates and sanitized execution evidence; `checkpoints` stores hashes only; `reports` stores the audit, source mapping and release report. `.github/workflows/ci.yml` defines Windows/Linux synthetic CPU checks.
 
-Executed: independent venv installation and `pip check`, 14 tests, synthetic-input checks of actual H1x5 weights, read-only format/hash checks of 57 H1 records, and R0 training/export/reload on one real record. The R0 real-data run used the existing project environment; independent-environment tests used synthetic CPU workflows. Not executed: complete CV/search, new lockbox evaluation, hidden testing, new-environment GPU training, Linux or Actions. See [reproducibility](docs/reproducibility.md) for code/workflow/result distinctions.
+Executed: independent venv installation and `pip check`, 14 tests, synthetic-input checks of actual H1x5 weights, read-only format/hash checks of 57 H1 records, and R0 training/export/reload on one real record. A fresh local Git clone without runtime caches also passed all 14 tests in 35.61 seconds. The R0 real-data run used the existing project environment; independent-environment tests used synthetic CPU workflows. Not executed: complete CV/search, new lockbox evaluation, hidden testing, new-environment GPU training, Linux or Actions. See [reproducibility](docs/reproducibility.md) for code/workflow/result distinctions.
 
 ## Weights, citation and licensing
 

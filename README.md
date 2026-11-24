@@ -104,7 +104,7 @@ reports/        发布审计、来源清单、发布报告
 .github/        Windows/Linux合成CPU CI配置
 ```
 
-已执行：独立venv安装与`pip check`、14项测试、H1x5正式权重合成接口检查、57条H1数据只读格式核验、R0单记录训练/导出/重载。R0真实数据流程使用原项目环境；新环境测试为CPU合成流程。未执行：完整CV/超参数搜索、官方隐藏测试、新环境GPU训练、Linux/Actions。来源与详细限制见[复现指南](docs/reproducibility.md)及[发布报告](reports/github_release_report.md)。
+已执行：独立venv安装与`pip check`、14项测试、H1x5正式权重合成接口检查、57条H1数据只读格式核验、R0单记录训练/导出/重载。从本地Git提交新建不带运行缓存的克隆，再运行14项测试也全部通过（35.61秒）。R0真实数据流程使用原项目环境；新环境测试为CPU合成流程。未执行：完整CV/超参数搜索、官方隐藏测试、新环境GPU训练、Linux/Actions。来源与详细限制见[复现指南](docs/reproducibility.md)及[发布报告](reports/github_release_report.md)。
 
 ## 权重、引用和许可
 

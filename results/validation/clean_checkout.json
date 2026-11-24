@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "source_commit": "a346ae8d3e55fe4c812875be39039b531991c306",
+  "clone_method": "local git clone --no-hardlinks; runtime caches and weights not copied",
+  "environment": "same new isolated Windows validation venv; CPU",
+  "tests": 14,
+  "seconds": 35.602,
+  "failures": 0,
+  "errors": 0,
+  "publishable_files": 296,
+  "content_scan": "PASS",
+  "junit_sha256": "89880a750b08eaf3945ceb54c8d2b1547498b67677a986a7b0f34434242b1aa0",
+  "log_sha256": "aa216e2dcf6830b0f5af125a43e0b32038203947f489df2aa5270780f1b853a2",
+  "network_clone_tested": false
+}

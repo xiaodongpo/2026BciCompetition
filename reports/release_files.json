@@ -1,5 +1,5 @@
 {
-  "files": 296,
+  "files": 297,
   "entries": [
     {
       "path": ".gitattributes",
@@ -68,8 +68,8 @@
     },
     {
       "path": "docs/reproducibility.md",
-      "bytes": 4502,
-      "sha256": "4375e5a17b9f26021d2f83cb031f9506b534f8c75df2fbddeb389147563595d5"
+      "bytes": 4774,
+      "sha256": "77e47704c10caa7b09deadec28e726b7a1e2e57f70a1601a4ce2d88cdbacec47"
     },
     {
       "path": "docs/training.md",
@@ -103,13 +103,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 7434,
-      "sha256": "3fc33fdf9024e7a4d48840051dc9dea9c57fd9676a31437163914555e3d2bb8a"
+      "bytes": 7540,
+      "sha256": "270dc70f79c2d01f28ee823c628c3f2cde3b525792c2caa80a927ac25bac5f7e"
     },
     {
       "path": "README_EN.md",
-      "bytes": 7769,
-      "sha256": "9ed02b0cc70d38f2a69c6da002b41a56ebbc2cfd3283056349e1d792ade9e7ef"
+      "bytes": 7859,
+      "sha256": "4406ad42b1dd8f3d6338ee957ad7fca7eff1516b42838a8da3435f145ee5580e"
     },
     {
       "path": "reports/dependency_licenses.json",
@@ -123,8 +123,8 @@
     },
     {
       "path": "reports/github_release_report.md",
-      "bytes": 6191,
-      "sha256": "7021becd96bd0a04d3f6b6dc4fb0d062b0c6fb668e3831d6fced3b3a678b0884"
+      "bytes": 6496,
+      "sha256": "6b8ac3ae5ff2f0ef1409da95ca6387ac4ab9213be0d63799dae7fe7a23f961cc"
     },
     {
       "path": "reports/historical_sources.json",
@@ -269,6 +269,11 @@
       "path": "results/historical/verified_aggregate.json",
       "bytes": 593,
       "sha256": "c6219546d42cae1c99f6eb4064b8f2934a116923c92e2b51c5a4b91a1ebb20b6"
+    },
+    {
+      "path": "results/validation/clean_checkout.json",
+      "bytes": 582,
+      "sha256": "288bebdfe8d9d7b1e722b6e64dc4ee5967203551934b4ad6086150044072d927"
     },
     {
       "path": "results/validation/commands.json",
