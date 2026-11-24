@@ -105,7 +105,6 @@ tests/          无真实数据CPU验收
 docs/           数据、安装、训练、评价、推理、架构与复现
 results/        历史汇总与本次脱敏验证证据
 checkpoints/    H1x5、R0、D2最终权重、配置及哈希清单
-reports/        发布审计、来源清单、发布报告
 .github/        Windows/Linux合成CPU CI配置
 ```
 
