@@ -31,7 +31,7 @@ CPU合成测试覆盖模型加载、特征维度、配置、优化、概率范�
 
 ## 可复现性分级
 
-**代码可运行：** 当前Windows独立环境的核心CPU链路已执行。模块依赖和主要CLI帮助入口可检查。可选BIOT/SingLEM扩展未在新环境安装执行。
+**代码可运行：** Windows独立环境及GitHub-hosted Windows/Ubuntu的CPU链路已执行。两类CI完成在线安装、pip check、17项测试、三套权重核验及H1x5正式权重合成检查。可选BIOT/SingLEM扩展未在新环境安装执行。
 
 **小规模流程可复现：** H1/D2/R0合成训练导出与推理通过；R0一条真实记录完成正式训练链的缩小验收。新增逐窗口CSV导出属于可选日志功能，本次未重跑真实H1评价来产生新分数。
 
@@ -48,3 +48,13 @@ CPU合成测试覆盖模型加载、特征维度、配置、优化、概率范�
 已建立本地main分支和初始提交`a346ae8`，并从该提交的干净克隆完成14项测试。公开权重时增加精确文件SHA白名单，以及授权文件可接受、权重被修改会拒绝、未授权BDF仍拒绝三项回归检查。算法训练/推理源码未因发布授权改变。最新本地与远端提交及最终文件数由Git和交付回执记录，避免循环引用本报告自身哈希。
 
 发布前已确认目标仓库为空且为public，当前账号具有admin/push权限，SSH推送预检成功；不覆盖任何已有远端历史，不创建Release或稳定标签。用户第13.5节要求的发布确认已取得，见[授权范围](publication_authorization.json)。CI执行状态以GitHub Actions及后续验收记录为准，不将本机测试冒充CI结果。
+
+## 远端发布验收
+
+公开仓库的首次发布提交为`0a78da746b99f4f01c062e70d02041f3de4a6c93`。远端334个文件的Git blob SHA及字节数与本地审计树完全一致；GitHub识别MIT，匿名下载的H1x5网络文件通过SHA-256核验，Release与tag数量均为0，见[首次上传核验](../results/validation/github_upload_0a78da7.json)。
+
+[GitHub Actions运行45347242025](https://github.com/xiaodongpo/2026BciCompetition/actions/runs/45347242025)已成功：Windows 17项测试19.33秒，Ubuntu 17项测试17.11秒；两个job的在线安装、pip check、安全扫描、三套权重哈希、H1x5正式权重合成检查及R0合成训练全部通过。执行元数据见[CI记录](../results/validation/github_actions.json)。
+
+发布目录内的R0和D2正式权重也通过合成检查：[R0 32决策](../results/validation/r0_published_weights.json)、[D2 35决策且分块一致](../results/validation/d2_published_weights.json)。这些不是新增分类性能结果。
+
+后续提交只追加本节、平台状态说明和验收JSON；算法、测试、依赖、CI配置及模型文件与已通过CI的提交逐字节一致。该文档提交使用`[skip ci]`避免重复运行相同计算，仍执行本地完整发布扫描和文件清单核验。最新文件数由release_files.json记录，不能用首次上传的334推断后续元数据文件数。

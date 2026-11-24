@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "model": "R0",
+  "synthetic_input": true,
+  "decisions": 32,
+  "scores_in_range": true,
+  "competition_metrics_reproduced": false
+}

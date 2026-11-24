@@ -41,7 +41,7 @@ python scripts/synthetic_smoke.py --out cache/r0_demo
 python scripts/evaluate_predictions.py examples/sample_output/metric_fixture.csv
 ```
 
-Inspect `cache/h1_demo/report.json` and `cache/r0_demo/predictions.csv`. Synthetic models are interface fixtures, not scientifically evaluated classifiers. Use a new output directory for another training run. Windows CPU execution was validated. Installation succeeded using locally cached wheels after online downloads stalled; a fresh online installation, Linux execution and GitHub Actions remain unverified. See [installation](docs/installation.md) for Linux, GPU and optional transfer dependencies.
+Inspect `cache/h1_demo/report.json` and `cache/r0_demo/predictions.csv`. Synthetic models are interface fixtures, not scientifically evaluated classifiers. Use a new output directory for another training run. Local Windows CPU execution was validated using cached wheels after downloads stalled. Subsequently, Windows and Linux GitHub Actions both completed online dependency installation, all 17 tests, bundle hash checks and actual H1x5 synthetic inference; see the [CI record](results/validation/github_actions.json). See [installation](docs/installation.md) for Linux, GPU and optional transfer dependencies.
 
 ## Data, training, evaluation and inference
 
@@ -77,7 +77,7 @@ Do not rank different protocols against one another. H1/H2 average reference see
 
 `routes/h1`, `routes/r0`, `routes/d2` and `routes/legacy` preserve isolated research namespaces. `scripts` provides launchers and synthetic/data/model/safety checks; `tests` contains CPU acceptance tests; `docs` contains detailed guides; `results` stores historical aggregates and sanitized execution evidence; `checkpoints` stores authorized final bundles and hashes; `reports` stores the audit, source mapping and release report. `.github/workflows/ci.yml` defines Windows/Linux synthetic CPU checks.
 
-Executed: independent venv installation and `pip check`, 14 tests, synthetic-input checks of actual H1x5 weights, read-only format/hash checks of 57 H1 records, and R0 training/export/reload on one real record. A fresh local Git clone without runtime caches also passed all 14 tests in 35.61 seconds. The R0 real-data run used the existing project environment; independent-environment tests used synthetic CPU workflows. Not executed: complete CV/search, new lockbox evaluation, hidden testing, new-environment GPU training, Linux or Actions. See [reproducibility](docs/reproducibility.md) for code/workflow/result distinctions.
+Executed: independent venv installation and `pip check`, 14 tests, synthetic-input checks of actual H1x5 weights, read-only format/hash checks of 57 H1 records, and R0 training/export/reload on one real record. A fresh local Git clone without runtime caches also passed all 14 tests in 35.61 seconds. The R0 real-data run used the existing project environment; independent-environment tests used synthetic CPU workflows. Subsequently, Windows/Linux GitHub Actions both passed all 17 tests, model hash checks and actual H1x5 synthetic inference. Not executed: complete CV/search, new lockbox evaluation, hidden testing or new-environment GPU training. See [reproducibility](docs/reproducibility.md) for code/workflow/result distinctions.
 
 ## Weights, citation and licensing
 

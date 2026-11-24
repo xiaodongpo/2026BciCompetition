@@ -1,5 +1,5 @@
 {
-  "files": 334,
+  "files": 338,
   "entries": [
     {
       "path": ".gitattributes",
@@ -228,8 +228,8 @@
     },
     {
       "path": "docs/installation.md",
-      "bytes": 3087,
-      "sha256": "20d688fa15d543c66e581b19c044688abb35481094a0aa3163897e17b8b6a50d"
+      "bytes": 3259,
+      "sha256": "307513d5087e2d9402081781bf875e53dc9672949bc1f5e6aa9a1886dc015c46"
     },
     {
       "path": "docs/model_architecture.md",
@@ -238,8 +238,8 @@
     },
     {
       "path": "docs/reproducibility.md",
-      "bytes": 4702,
-      "sha256": "1f28d7635d77d3775ebfdef078d1eda3d2d91562e2ad36f56bbf4e42a8b2fbd2"
+      "bytes": 5010,
+      "sha256": "b8b602011c3793227487dfb40c951e28dc8f506ba57fe7617c5b545f8fee4ace"
     },
     {
       "path": "docs/training.md",
@@ -273,13 +273,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 7936,
-      "sha256": "eb506b6285532177bddafe392a141e8f180f81d6a39db12f1af36958aa3c3bb2"
+      "bytes": 8116,
+      "sha256": "2bcba2c05f2e5284b3b9e1def57a47f89ae237a1bb05b81b1f1bff90cffa298f"
     },
     {
       "path": "README_EN.md",
-      "bytes": 8331,
-      "sha256": "4271daeb17cf09a85708c17354e10cbcf4fd5bcdc3321dc07fbdd2fe9844bc9e"
+      "bytes": 8548,
+      "sha256": "f6e73c682feab5d819b755746bc1f5f13dd0b755c4cb389c146999d0a6c4e78b"
     },
     {
       "path": "reports/dependency_licenses.json",
@@ -293,8 +293,8 @@
     },
     {
       "path": "reports/github_release_report.md",
-      "bytes": 6791,
-      "sha256": "48da430fc4ea9fd458a4473ea529401d8fb7631b4a1017fc711f098d3081923b"
+      "bytes": 8250,
+      "sha256": "e9132a59e10143cf19ef0b73e8ea8f996d91e6dc600b1da56a13c38fcaa85112"
     },
     {
       "path": "reports/historical_sources.json",
@@ -456,6 +456,11 @@
       "sha256": "1c86718c198158f15ecf4b599f2518cc7d4a395f0956fbdb086ac24e37aacfa2"
     },
     {
+      "path": "results/validation/d2_published_weights.json",
+      "bytes": 184,
+      "sha256": "7696d7506613f7b6997d2a2f5f7d040eda9ffaba78fb59f45cdb164d369b5c63"
+    },
+    {
       "path": "results/validation/data_interface.json",
       "bytes": 486,
       "sha256": "c9eaeba392c3d9b4636b9d72a910b501bd62634abf073ee781bb89d69a4f38a5"
@@ -464,6 +469,16 @@
       "path": "results/validation/environment.json",
       "bytes": 1711,
       "sha256": "2011a5f99c110863d2467a8013ac6d5abbbb67e6ca44f53a392db5719832f395"
+    },
+    {
+      "path": "results/validation/github_actions.json",
+      "bytes": 2687,
+      "sha256": "38906802a91c89c702f9e4b9e29b19aa4cebd48a3a325989c319ba38af953d2c"
+    },
+    {
+      "path": "results/validation/github_upload_0a78da7.json",
+      "bytes": 530,
+      "sha256": "e6564cbb79d96a768c370195a21eb2ba37604b7ffa51aa706e021ad639f766f6"
     },
     {
       "path": "results/validation/h1_original_weights.json",
@@ -484,6 +499,11 @@
       "path": "results/validation/r0_one_record.json",
       "bytes": 840,
       "sha256": "b7aeb86b303ed2227c5f2d9a8866994d663a47f21762d6eda1918fa4c3e0bfc8"
+    },
+    {
+      "path": "results/validation/r0_published_weights.json",
+      "bytes": 156,
+      "sha256": "12264e7c99253dc7dd3fab8bea621d45ed2c799b9a65dd208e7aea6fc000e3be"
     },
     {
       "path": "results/validation/r0_synthetic.json",

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "repository": "https://github.com/xiaodongpo/2026BciCompetition",
+  "public": true,
+  "default_branch": "main",
+  "commit": "0a78da746b99f4f01c062e70d02041f3de4a6c93",
+  "remote_tree_equals_audited_local_tree": true,
+  "files": 334,
+  "bytes": 53518110,
+  "published_model_files": 34,
+  "license": "MIT",
+  "releases": 0,
+  "tags": 0,
+  "anonymous_model_download_sha256_verified": true,
+  "scope": "Initial public upload at the named commit; subsequent documentation-only additions are recorded in Git."
+}

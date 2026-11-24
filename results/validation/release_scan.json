@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "files": 334,
-  "bytes": 53518041,
+  "files": 338,
+  "bytes": 53524731,
   "findings": [],
   "approved_model_files": 34,
   "scope": "current publishable files; only owner-approved exact model hashes are allowed; raw data and runtime caches remain excluded",

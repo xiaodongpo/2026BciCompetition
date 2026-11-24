@@ -22,7 +22,7 @@ python scripts/h1_synthetic_smoke.py --out cache/h1_demo
 
 无需激活也可把`python`替换成`.\.venv\Scripts\python.exe`。若系统限制激活脚本，直接使用解释器路径，无需修改系统执行策略。脚本应从仓库根目录启动；不要把多个路线的`src`同时加入PYTHONPATH。
 
-## Linux（命令及CI已配置，尚未实机验证）
+## Linux（Ubuntu GitHub Actions CPU验证通过）
 
 ```bash
 python3.11 -m venv .venv
@@ -50,6 +50,6 @@ BIOT/SingLEM仅属于历史路线，另外执行`python -m pip install -r requir
 
 2026-11-23在Windows新建了独立venv，未继承原环境site-packages。在线下载PyTorch CPU wheel及部分依赖停滞，因此改用本机既有的官方PyTorch 2.7.1+cu128 wheel和pip缓存中的兼容wheel，通过`pip --no-index --find-links`安装同一依赖清单。不是复制原虚拟环境。`pip check`通过，14项CPU测试通过（76.05秒）。
 
-完整安装快照见[独立环境锁定文件](../requirements-validation-windows.txt)和[验证摘要](../results/validation/environment.json)。该快照只记录新建验收环境，不能当作Linux或所有GPU平台的锁文件。全新在线下载尚未完成验证；GitHub Actions尚未运行。缓存wheel及环境本身不随仓库发布。
+完整安装快照见[独立环境锁定文件](../requirements-validation-windows.txt)和[验证摘要](../results/validation/environment.json)。该快照只记录新建验收环境，不能当作Linux或所有GPU平台的锁文件。这是首次本机安装的历史快照。随后GitHub Actions在Windows和Ubuntu完成在线安装、pip check、17项测试及三套正式权重检查，见[CI记录](../results/validation/github_actions.json)。GPU训练仍未重新验证。缓存wheel及环境本身不随仓库发布。
 
 常见问题：缺少模型文件时先运行合成示例或自行训练；缓存与数据版本不一致时换用新的工作目录；无效路径通过`--data-root`解决；LightGBM依赖缺失应检查平台运行库，不应直接忽略导入错误。

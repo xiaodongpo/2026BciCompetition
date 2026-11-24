@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "repository": "https://github.com/xiaodongpo/2026BciCompetition",
+  "commit": "0a78da746b99f4f01c062e70d02041f3de4a6c93",
+  "run_id": 45347242025,
+  "url": "https://github.com/xiaodongpo/2026BciCompetition/actions/runs/45347242025",
+  "event": "push",
+  "execution": "GitHub-hosted CPU runners, Python 3.11, online dependencies",
+  "jobs": [
+    {
+      "id": 138284665607,
+      "name": "test (windows-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "tests": 17,
+      "pytest_summary": "17 passed in 19.33s\r",
+      "completed_steps": [
+        "Set up job",
+        "Run actions/checkout@v4",
+        "Run actions/setup-python@v5",
+        "Run python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu",
+        "Run python -m pip install -r requirements-dev.txt",
+        "Run python -m pip check",
+        "Run python scripts/check_release.py",
+        "Run python -m pytest -q",
+        "Run python scripts/verify_weights.py --route h1 --model checkpoints/h1",
+        "Run python scripts/verify_weights.py --route r0 --model checkpoints/r0",
+        "Run python scripts/verify_weights.py --route d2 --model checkpoints/d2",
+        "Run python scripts/h1_synthetic_smoke.py --model checkpoints/h1 --out cache/ci_final_h1",
+        "Run python scripts/synthetic_smoke.py --out cache/ci_smoke",
+        "Post Run actions/setup-python@v5",
+        "Post Run actions/checkout@v4",
+        "Complete job"
+      ]
+    },
+    {
+      "id": 138284665896,
+      "name": "test (ubuntu-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "tests": 17,
+      "pytest_summary": "17 passed in 17.11s",
+      "completed_steps": [
+        "Set up job",
+        "Run actions/checkout@v4",
+        "Run actions/setup-python@v5",
+        "Run python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu",
+        "Run python -m pip install -r requirements-dev.txt",
+        "Run python -m pip check",
+        "Run python scripts/check_release.py",
+        "Run python -m pytest -q",
+        "Run python scripts/verify_weights.py --route h1 --model checkpoints/h1",
+        "Run python scripts/verify_weights.py --route r0 --model checkpoints/r0",
+        "Run python scripts/verify_weights.py --route d2 --model checkpoints/d2",
+        "Run python scripts/h1_synthetic_smoke.py --model checkpoints/h1 --out cache/ci_final_h1",
+        "Run python scripts/synthetic_smoke.py --out cache/ci_smoke",
+        "Post Run actions/setup-python@v5",
+        "Post Run actions/checkout@v4",
+        "Complete job"
+      ]
+    }
+  ],
+  "full_competition_experiments_rerun": false
+}

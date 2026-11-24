@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "model": "D2",
+  "synthetic_input": true,
+  "decisions": 35,
+  "chunk_invariance": true,
+  "scores_in_range": true,
+  "competition_metrics_reproduced": false
+}

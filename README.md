@@ -60,7 +60,7 @@ python scripts/synthetic_smoke.py --out cache/r0_demo
 python scripts/evaluate_predictions.py examples/sample_output/metric_fixture.csv
 ```
 
-查看`cache/h1_demo/report.json`及`cache/r0_demo/predictions.csv`。示例由固定种子生成，不包含真实受试者数据，模型只用于功能测试。再次训练请用新输出目录。Windows独立环境已经CPU验证；Linux和GitHub Actions尚未运行。实际安装使用本地缓存wheel，完整在线下载验证未完成，详见[安装说明](docs/installation.md)。
+查看`cache/h1_demo/report.json`及`cache/r0_demo/predictions.csv`。示例由固定种子生成，不包含真实受试者数据，模型只用于功能测试。再次训练请用新输出目录。Windows本机独立环境以及GitHub Actions的Windows/Linux CPU环境均已验证。初次本机安装使用缓存wheel；随后两类CI完成在线依赖安装与全部17项测试，见[CI验收](results/validation/github_actions.json)和[安装说明](docs/installation.md)。
 
 ## 数据、训练与推理
 
@@ -108,7 +108,7 @@ reports/        发布审计、来源清单、发布报告
 .github/        Windows/Linux合成CPU CI配置
 ```
 
-已执行：独立venv安装与`pip check`、14项测试、H1x5正式权重合成接口检查、57条H1数据只读格式核验、R0单记录训练/导出/重载。从本地Git提交新建不带运行缓存的克隆，再运行14项测试也全部通过（35.61秒）。R0真实数据流程使用原项目环境；新环境测试为CPU合成流程。未执行：完整CV/超参数搜索、官方隐藏测试、新环境GPU训练、Linux/Actions。来源与详细限制见[复现指南](docs/reproducibility.md)及[发布报告](reports/github_release_report.md)。
+已执行：独立venv安装与`pip check`、14项测试、H1x5正式权重合成接口检查、57条H1数据只读格式核验、R0单记录训练/导出/重载。从本地Git提交新建不带运行缓存的克隆，再运行14项测试也全部通过（35.61秒）。R0真实数据流程使用原项目环境；新环境测试为CPU合成流程。随后Windows/Linux GitHub Actions均通过17项测试、三套权重校验及正式H1x5合成接口检查。未执行：完整CV/超参数搜索、官方隐藏测试、新环境GPU训练。来源与详细限制见[复现指南](docs/reproducibility.md)及[发布报告](reports/github_release_report.md)。
 
 ## 权重、引用和许可
 
