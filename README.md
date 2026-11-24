@@ -1,10 +1,12 @@
-# EEG Cognitive State Decoding for Industrial BCI — 2026 Competition
+# EEG Cognitive State Decoding for Industrial BCI — 2026 Competition-队长不让叫南脑一号队
 
 [English](README_EN.md) · [完整复现指南](docs/reproducibility.md) · [发布报告](reports/github_release_report.md)
 
-面向工业场景单通道EEG的relax/task二分类研究代码：250 Hz，输入微伏，relax=0、task=1，输出连续`P(task)`。仓库以决赛正式模型**H1x5**为核心，保留初赛R0 LAG-EnergyProto、D2在线适应和早期严格窗口/切换期研究，便于追溯方法演进。
+面向工业场景单通道EEG的relax/task二分类研究代码：250 Hz，输入微伏，relax=0、task=1，输出连续`P(task)`。
+仓库包含决赛正式模型**H1x5**，初赛R0 LAG-EnergyProto、D2在线适应和早期严格窗口/切换期研究。
 
-**代码与最终模型采用MIT许可。** [GitHub仓库](https://github.com/xiaodongpo/2026BciCompetition)提供H1x5、R0、D2完整最终权重；原始EEG、非公开标签、第三方预训练权重和内部会话不包含。独立环境与干净克隆已通过CPU测试，小规模训练/导出/推理已实际执行；完整竞赛实验本次未重跑。
+ [GitHub仓库](https://github.com/xiaodongpo/2026BciCompetition)提供H1x5、R0、D2完整最终权重；
+ 原始EEG、非公开标签和第三方预训练权重不包含。
 
 ## 方法与因果边界
 
@@ -36,11 +38,8 @@ H1x5两个网络成员各5种子，两个树成员各3种子，训练不需要�
 | D2，历史路线 | 在线分位树与严格树/LR融合 | 原始特征窗最多1500点；参考历史和沿用评分超出六秒 |
 | legacy | 经典模型、CNN/TCN、迁移与切换训练研究 | 保留严格端到端六秒实现及测试，逐配置核查 |
 
-因果性与六秒有限支持须分别验证，不能把所有路线称作“严格六秒”。记录编号不是核实受试者ID；设备、电极及可靠身份信息缺失。
 
 ## 快速开始
-
-先克隆仓库，再运行以下PowerShell命令：
 
 ```powershell
 git clone https://github.com/xiaodongpo/2026BciCompetition.git
@@ -60,7 +59,8 @@ python scripts/synthetic_smoke.py --out cache/r0_demo
 python scripts/evaluate_predictions.py examples/sample_output/metric_fixture.csv
 ```
 
-查看`cache/h1_demo/report.json`及`cache/r0_demo/predictions.csv`。示例由固定种子生成，不包含真实受试者数据，模型只用于功能测试。再次训练请用新输出目录。Windows本机独立环境以及GitHub Actions的Windows/Linux CPU环境均已验证。初次本机安装使用缓存wheel；随后两类CI完成在线依赖安装与全部17项测试，见[CI验收](results/validation/github_actions.json)和[安装说明](docs/installation.md)。
+查看`cache/h1_demo/report.json`及`cache/r0_demo/predictions.csv`。示例由固定种子生成，不包含真实受试者数据，模型只用于功能测试。
+两类CI完成在线依赖安装与全部17项测试，见[CI验收](results/validation/github_actions.json)和[安装说明](docs/installation.md)。
 
 ## 数据、训练与推理
 
@@ -72,7 +72,7 @@ python scripts/run_route.py --data-root /path/to/authorized_data h1 scripts.fina
 python scripts/run_route.py --data-root /path/to/authorized_data h1 scripts.finals.build_cache --bpn
 ```
 
-随后按[训练说明](docs/training.md)执行H1x5两个网络分支各5种子、30 epochs及最终导出。开发集真实接口CV命令见[评价说明](docs/evaluation.md)，不要用全57记录最终拟合模型评估其自身“留出集”。
+随后按[训练说明](docs/training.md)执行H1x5两个网络分支各5种子、30 epochs及最终导出。开发集真实接口CV命令见[评价说明](docs/evaluation.md)。
 
 H1接口为`filter_eeg(bdf_path)`和`predict(window, reference)`，模型目录由`FIN_MODEL_DIR`设置。R0连续分块推理示例：
 
@@ -90,7 +90,8 @@ python routes/r0/run_inference.py --input cache/r0_demo/raw_eeg_uv.npy --model c
 | H1，46记录5折，真实接口，记录等权 | 0.710315 | 0.652764 | 0.652445 |
 | H2，同H1开发协议 | 0.709913 | 0.652543 | 0.652303 |
 
-这些行不能跨协议排名。H1/H2每记录平均参考种子14/15/16，决赛score=(AUC+ACC)/2；初赛通常使用(AUC+bACC)/2。H1开发模型不等于全57记录拟合的H1x5正式权重。本仓库不声称官方隐藏测试成绩。[实验总结](docs/experiments.md)包含早期基线、未晋级结果、过渡期消融、D2最差顺序及已保存历史锁箱结果的边界。
+这些行不能跨协议排名。H1/H2每记录平均参考种子14/15/16，决赛score=(AUC+ACC)/2；初赛通常使用(AUC+bACC)/2。H1开发模型不等于全57记录拟合的H1x5正式权重。
+[实验总结](docs/experiments.md)包含早期基线、未晋级结果、过渡期消融、D2最差顺序及已保存历史锁箱结果的边界。
 
 ## 仓库结构与复现证据
 
@@ -108,14 +109,10 @@ reports/        发布审计、来源清单、发布报告
 .github/        Windows/Linux合成CPU CI配置
 ```
 
-已执行：独立venv安装与`pip check`、14项测试、H1x5正式权重合成接口检查、57条H1数据只读格式核验、R0单记录训练/导出/重载。从本地Git提交新建不带运行缓存的克隆，再运行14项测试也全部通过（35.61秒）。R0真实数据流程使用原项目环境；新环境测试为CPU合成流程。随后Windows/Linux GitHub Actions均通过17项测试、三套权重校验及正式H1x5合成接口检查。未执行：完整CV/超参数搜索、官方隐藏测试、新环境GPU训练。来源与详细限制见[复现指南](docs/reproducibility.md)及[发布报告](reports/github_release_report.md)。
-
 ## 权重、引用和许可
-
-公开权重后的本机版本已通过17项测试（45.12秒），并使用`checkpoints/h1`中的正式权重完成合成接口检查，见[验收记录](results/validation/publication.json)。
 
 [模型清单](checkpoints/README.md)记录36项SHA-256和大小，其中34个H1x5/R0/D2最终模型及配置文件经所有者授权随仓库公开，约52.2 MB；2个第三方预训练文件仍排除。加载前运行`python scripts/verify_weights.py --route h1 --model checkpoints/h1`核验。
 
-所有者已确认采用[MIT](LICENSE)并公开最终权重；BIOT/SingLEM原始MIT声明保留，其第三方预训练权重仍不分发，见[第三方声明](THIRD_PARTY_NOTICES.md)。比赛数据和官方文件不由本项目重新授权。
+所有者已确认采用[MIT](LICENSE)并公开最终权重；BIOT/SingLEM原始MIT声明保留，其第三方预训练权重不分发，见[第三方声明](THIRD_PARTY_NOTICES.md)。比赛数据和官方文件不由本项目重新授权。
 
-[CITATION.cff](CITATION.cff)提供仓库软件引用，以维护者GitHub账号及贡献者集体署名；没有虚构论文、DOI或比赛成绩。感谢赛事组织方、团队贡献者及所用开源项目。
+[CITATION.cff](CITATION.cff)提供仓库软件引用，以维护者GitHub账号及贡献者集体署名；感谢赛事组织方、团队贡献者及所用开源项目。
