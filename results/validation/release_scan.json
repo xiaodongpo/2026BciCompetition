@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "files": 296,
+  "bytes": 1269295,
+  "findings": [],
+  "scope": "current publishable files; runtime caches are excluded and must not enter Git",
+  "license_owner_approval_pending": true,
+  "git_remote_mutations_performed": false
+}

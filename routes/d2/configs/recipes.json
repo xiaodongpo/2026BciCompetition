@@ -1,0 +1,112 @@
+{
+ "D2": {
+  "note": "recipe D with LightGBM parameters re-tuned on the 252 features under the 20-order objective (configs/lgb_order_best_w62.json)",
+  "features": [
+   "cache/feat2_w6_s1.npz",
+   "cache/feat2_w2_s1.npz"
+  ],
+  "members": [
+   {
+    "view": "rank",
+    "n_aug": 8,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 5,
+    "lr": false,
+    "weight": 0.8
+   },
+   {
+    "view": "abs",
+    "n_aug": 0,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 5,
+    "lr": true,
+    "weight": 0.2
+   }
+  ]
+ },
+ "D": {
+  "note": "recipe C with an extra view: features of the last 2 s of the same 6-s window, for both members",
+  "features": [
+   "cache/feat2_w6_s1.npz",
+   "cache/feat2_w2_s1.npz"
+  ],
+  "members": [
+   {
+    "view": "rank",
+    "n_aug": 8,
+    "params": "configs/lgb_order_best.json",
+    "seeds": 5,
+    "lr": false,
+    "weight": 0.8
+   },
+   {
+    "view": "abs",
+    "n_aug": 0,
+    "params": "configs/lgb_order_best.json",
+    "seeds": 5,
+    "lr": true,
+    "weight": 0.2
+   }
+  ]
+ },
+ "C": {
+  "note": "order-robust default: rank view trained on random trial orders, late-fused with a strict 6-s member",
+  "members": [
+   {
+    "view": "rank",
+    "n_aug": 8,
+    "params": "configs/lgb_order_best.json",
+    "seeds": 5,
+    "lr": false,
+    "weight": 0.8
+   },
+   {
+    "view": "abs",
+    "n_aug": 0,
+    "params": "configs/lgb_order_best.json",
+    "seeds": 5,
+    "lr": true,
+    "weight": 0.2
+   }
+  ]
+ },
+ "B": {
+  "note": "earlier alternate: rank view + LR, 4 random orders",
+  "members": [
+   {
+    "view": "rank",
+    "n_aug": 4,
+    "params": "configs/lgb_best.json",
+    "seeds": 5,
+    "lr": true,
+    "weight": 1.0
+   }
+  ]
+ },
+ "A": {
+  "note": "rejected: rank view trained on the original order only (exploits relax-first)",
+  "members": [
+   {
+    "view": "rank",
+    "n_aug": 0,
+    "params": "configs/lgb_best.json",
+    "seeds": 5,
+    "lr": true,
+    "weight": 1.0
+   }
+  ]
+ },
+ "S": {
+  "note": "strict 6 s, no online adaptation",
+  "members": [
+   {
+    "view": "abs",
+    "n_aug": 0,
+    "params": "configs/lgb_best.json",
+    "seeds": 5,
+    "lr": true,
+    "weight": 1.0
+   }
+  ]
+ }
+}

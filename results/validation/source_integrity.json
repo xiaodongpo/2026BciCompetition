@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "original_source_files_verified": 222,
+  "original_files_unchanged": true,
+  "modified_copies": [
+    "routes/r0/r0/signal.py",
+    "routes/r0/tests/end_to_end_test.py",
+    "routes/legacy/scripts/audit.py",
+    "routes/legacy/scripts/r6_prepare.py",
+    "routes/legacy/third_party/biot.py",
+    "routes/legacy/third_party/singlem_model.py",
+    "routes/d2/src/data/io.py",
+    "routes/h1/src/data/io.py",
+    "routes/h1/src/training/train_hybrid.py",
+    "routes/h1/src/training/train_hybrid_fin.py",
+    "routes/h1/src/training/train_rankdeep.py",
+    "routes/h1/scripts/finals/eval_solution.py",
+    "routes/h1/scripts/finals/train_fin.py",
+    "routes/h1/finals/submission/solution.py",
+    "routes/h1/scripts/train_final.py",
+    "routes/d2/scripts/refit_final.py"
+  ],
+  "note": "Compared selected original source hashes to the initial copy manifests; unrelated historical artifacts were not byte-hashed."
+}

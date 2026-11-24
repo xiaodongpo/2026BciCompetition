@@ -1,0 +1,10 @@
+# Direct runtime dependencies; tested release environment, distinct from historical training.
+numpy==2.4.6
+scipy==1.17.1
+pandas==2.3.3
+scikit-learn==1.9.1
+mne==1.13.2
+torch==2.7.1
+lightgbm==4.7.0
+joblib==1.5.3
+matplotlib==3.11.2

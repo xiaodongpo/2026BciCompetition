@@ -1,0 +1,50 @@
+{
+  "id": "w0_C10",
+  "config": {
+    "id": "w0_C10",
+    "features": "w0",
+    "model": "lr",
+    "C": 10,
+    "width": 0
+  },
+  "inner_score": 0.6152932629999294,
+  "threshold": 0.46,
+  "seconds": 5.76243770000292,
+  "seed": 20261104,
+  "fits": [
+    {
+      "fold": 0,
+      "seconds": 1.3778581000224221,
+      "structure": {
+        "input_features": 125,
+        "augmentation_views": 1,
+        "classifier_parameters": 126
+      },
+      "checkpoint": "experiments\\round4\\final_selection\\w0_C10_inner0.joblib",
+      "checkpoint_sha256": "11eec73f6a242f4ea81a82f43f987d05ceae4d2795da13ff37e68c162b28d643"
+    },
+    {
+      "fold": 1,
+      "seconds": 1.5060811000003014,
+      "structure": {
+        "input_features": 125,
+        "augmentation_views": 1,
+        "classifier_parameters": 126
+      },
+      "checkpoint": "experiments\\round4\\final_selection\\w0_C10_inner1.joblib",
+      "checkpoint_sha256": "2fb562a93fd0ee6e2f8a6ec95f7bb185989a63e494edade766d37850558c5d6f"
+    },
+    {
+      "fold": 2,
+      "seconds": 2.314714300009655,
+      "structure": {
+        "input_features": 125,
+        "augmentation_views": 1,
+        "classifier_parameters": 126
+      },
+      "checkpoint": "experiments\\round4\\final_selection\\w0_C10_inner2.joblib",
+      "checkpoint_sha256": "0a2d8b07fe1dbabc4af10f06105917303559e4b4134f7a17afa0536488a852b5"
+    }
+  ],
+  "source_manifest": "experiments/round4/run_manifest.json"
+}

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "This is a local release candidate. Confirm contributor names and the repository URL before using a final citation."
+type: software
+title: "EEG Cognitive State Decoding for Industrial BCI — 2026 Competition"
+authors:
+  - name: "Industrial EEG project contributors"
+version: 0.1.0
+abstract: "Research code for final H1x5 reference-conditioned decoding, R0 LAG-EnergyProto, adaptive D2 and strict-window baselines. Not an official competition benchmark."

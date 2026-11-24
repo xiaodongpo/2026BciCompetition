@@ -1,0 +1,32 @@
+{
+  "status": "END_TO_END_PASS",
+  "raw_record": "001",
+  "clean_windows": 1753,
+  "class_counts": [
+    877,
+    876
+  ],
+  "independent_quality_labels_and_arrays": true,
+  "stream_windows": 1892,
+  "cnn_seeds": [
+    42,
+    2024,
+    3407
+  ],
+  "epochs_each": 1,
+  "tree_rounds": 2,
+  "model_files": [
+    "config.json",
+    "energy_seed2024.pth",
+    "energy_seed3407.pth",
+    "energy_seed42.pth",
+    "lightgbm.txt",
+    "statistics.npz"
+  ],
+  "new_model_reload_and_inference": true,
+  "inference_decisions": 32,
+  "formal57_training_performed": false,
+  "all_algorithm_modules_inside_package_or_materialized_workdir": true,
+  "environment": "existing project environment, not new isolated venv",
+  "private_source_report_sha256": "8e8eaddb85c0f582cb8e51dc11d1c172f0b0c9bc758217583cb4d71187604ed3"
+}

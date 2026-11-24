@@ -1,0 +1,326 @@
+{
+  "record_nested": {
+    "selected": {
+      "pooled": {
+        "bacc": 0.594180688503614,
+        "auc": 0.6326936018034801,
+        "accuracy": 0.5942217387843897,
+        "f1": 0.6021589283391858,
+        "n": 37693
+      },
+      "record_macro": {
+        "bacc": 0.5942461180148332,
+        "auc": 0.6389158736374176,
+        "score": 0.6165809958261255
+      },
+      "folds": [
+        {
+          "outer_fold": 0,
+          "records": 15,
+          "selected_id": "filterbank_record_C10",
+          "threshold": 0.51,
+          "macro_bacc": 0.5880018775346965,
+          "macro_auc": 0.644888259753836,
+          "macro_score": 0.6164450686442663,
+          "bacc": 0.5890744007578467,
+          "auc": 0.6316637673927963,
+          "accuracy": 0.5894636924537257,
+          "f1": 0.6235311185260409,
+          "n": 12642
+        },
+        {
+          "outer_fold": 1,
+          "records": 15,
+          "selected_id": "robust_record_C10",
+          "threshold": 0.5,
+          "macro_bacc": 0.5912952344924405,
+          "macro_auc": 0.6267992503735906,
+          "macro_score": 0.6090472424330154,
+          "bacc": 0.5882336605370326,
+          "auc": 0.6262696289500609,
+          "accuracy": 0.5880619012527635,
+          "f1": 0.5802252816020025,
+          "n": 12213
+        },
+        {
+          "outer_fold": 2,
+          "records": 15,
+          "selected_id": "filterbank_record_C10",
+          "threshold": 0.49,
+          "macro_bacc": 0.6034412420173626,
+          "macro_auc": 0.6450601107848265,
+          "macro_score": 0.6242506764010948,
+          "bacc": 0.6047184424590165,
+          "auc": 0.6468341136372258,
+          "accuracy": 0.6047670976787661,
+          "f1": 0.599652832570617,
+          "n": 12838
+        }
+      ]
+    },
+    "reference": {
+      "pooled": {
+        "bacc": 0.5848576605053244,
+        "auc": 0.6145724693940271,
+        "accuracy": 0.5849627251744356,
+        "f1": 0.6043500252908447,
+        "n": 37693
+      },
+      "record_macro": {
+        "bacc": 0.5858654539919541,
+        "auc": 0.619795626660507,
+        "score": 0.6028305403262305
+      },
+      "folds": [
+        {
+          "outer_fold": 0,
+          "records": 15,
+          "selected_id": "legacy_C10",
+          "threshold": 0.49,
+          "macro_bacc": 0.5848820417383378,
+          "macro_auc": 0.6305122397601419,
+          "macro_score": 0.60769714074924,
+          "bacc": 0.5851564828248464,
+          "auc": 0.6205815064962915,
+          "accuracy": 0.5857459262774878,
+          "f1": 0.6352302012955353,
+          "n": 12642
+        },
+        {
+          "outer_fold": 1,
+          "records": 15,
+          "selected_id": "legacy_C10",
+          "threshold": 0.49,
+          "macro_bacc": 0.5812186964945326,
+          "macro_auc": 0.6103054151083689,
+          "macro_score": 0.5957620558014507,
+          "bacc": 0.5788998186834371,
+          "auc": 0.6108216498112278,
+          "accuracy": 0.5789732252517809,
+          "f1": 0.5848538672694978,
+          "n": 12213
+        },
+        {
+          "outer_fold": 2,
+          "records": 15,
+          "selected_id": "legacy_C10",
+          "threshold": 0.49,
+          "macro_bacc": 0.5914956237429919,
+          "macro_auc": 0.6185692251130103,
+          "macro_score": 0.6050324244280011,
+          "bacc": 0.5898881299469496,
+          "auc": 0.6181992264214217,
+          "accuracy": 0.5898893908708521,
+          "f1": 0.5885754473704774,
+          "n": 12838
+        }
+      ]
+    }
+  },
+  "date_nested": {
+    "selected": {
+      "pooled": {
+        "bacc": 0.591856806368128,
+        "auc": 0.6283184896800248,
+        "accuracy": 0.591993208288011,
+        "f1": 0.6162636923921451,
+        "n": 37693
+      },
+      "record_macro": {
+        "bacc": 0.5923854590270802,
+        "auc": 0.6369037142566607,
+        "score": 0.6146445866418705
+      },
+      "folds": [
+        {
+          "outer_fold": 0,
+          "records": 3,
+          "selected_id": "filterbank_record_C1",
+          "threshold": 0.45,
+          "macro_bacc": 0.5797709816561197,
+          "macro_auc": 0.6212261911898461,
+          "macro_score": 0.600498586422983,
+          "bacc": 0.5802659362873748,
+          "auc": 0.6264119929647411,
+          "accuracy": 0.5808620007908264,
+          "f1": 0.6068249258160238,
+          "n": 2529
+        },
+        {
+          "outer_fold": 1,
+          "records": 28,
+          "selected_id": "filterbank_record_C1",
+          "threshold": 0.48,
+          "macro_bacc": 0.5887735184352803,
+          "macro_auc": 0.6313631181154813,
+          "macro_score": 0.6100683182753807,
+          "bacc": 0.5887535600152336,
+          "auc": 0.6245183781474397,
+          "accuracy": 0.5888860630722279,
+          "f1": 0.6364556392668391,
+          "n": 23592
+        },
+        {
+          "outer_fold": 2,
+          "records": 9,
+          "selected_id": "robust_record_C10",
+          "threshold": 0.5,
+          "macro_bacc": 0.5701622376604569,
+          "macro_auc": 0.6106278959504107,
+          "macro_score": 0.5903950668054337,
+          "bacc": 0.5703685953331439,
+          "auc": 0.6094731744843224,
+          "accuracy": 0.571502190157176,
+          "f1": 0.512316715542522,
+          "n": 7762
+        },
+        {
+          "outer_fold": 3,
+          "records": 5,
+          "selected_id": "filterbank_record_C10",
+          "threshold": 0.49,
+          "macro_bacc": 0.6601828112236567,
+          "macro_auc": 0.7246340394386037,
+          "macro_score": 0.6924084253311303,
+          "bacc": 0.6603723110865969,
+          "auc": 0.7177677881963596,
+          "accuracy": 0.6603674540682415,
+          "f1": 0.6666666666666666,
+          "n": 3810
+        }
+      ]
+    },
+    "reference": {
+      "pooled": {
+        "bacc": 0.5846626600092504,
+        "auc": 0.6145162936425592,
+        "accuracy": 0.5847770142997374,
+        "f1": 0.605758331444117,
+        "n": 37693
+      },
+      "record_macro": {
+        "bacc": 0.5859599763798795,
+        "auc": 0.6195359347144098,
+        "score": 0.6027479555471447
+      },
+      "folds": [
+        {
+          "outer_fold": 0,
+          "records": 3,
+          "selected_id": "legacy_C10",
+          "threshold": 0.49,
+          "macro_bacc": 0.5543817340955797,
+          "macro_auc": 0.5877570090897335,
+          "macro_score": 0.5710693715926566,
+          "bacc": 0.5543681401847881,
+          "auc": 0.5918424021956412,
+          "accuracy": 0.5539739027283511,
+          "f1": 0.538083538083538,
+          "n": 2529
+        },
+        {
+          "outer_fold": 1,
+          "records": 28,
+          "selected_id": "legacy_C10",
+          "threshold": 0.49,
+          "macro_bacc": 0.5838247209082843,
+          "macro_auc": 0.6194174748307667,
+          "macro_score": 0.6016210978695254,
+          "bacc": 0.5835584215058036,
+          "auc": 0.6127018240306088,
+          "accuracy": 0.5836300440827399,
+          "f1": 0.6112320417936439,
+          "n": 23592
+        },
+        {
+          "outer_fold": 2,
+          "records": 9,
+          "selected_id": "legacy_C10",
+          "threshold": 0.49,
+          "macro_bacc": 0.5705383046361008,
+          "macro_auc": 0.5942130576669368,
+          "macro_score": 0.5823756811515188,
+          "bacc": 0.5681677372996252,
+          "auc": 0.5911303226798564,
+          "accuracy": 0.5680237052306106,
+          "f1": 0.5719392314566577,
+          "n": 7762
+        },
+        {
+          "outer_fold": 3,
+          "records": 5,
+          "selected_id": "legacy_C10",
+          "threshold": 0.49,
+          "macro_bacc": 0.644623361530195,
+          "macro_auc": 0.6848478441230684,
+          "macro_score": 0.6647356028266316,
+          "bacc": 0.6443643132928847,
+          "auc": 0.6899267788196359,
+          "accuracy": 0.6464566929133858,
+          "f1": 0.6759682463314891,
+          "n": 3810
+        }
+      ]
+    }
+  },
+  "promotion": {
+    "passed": true,
+    "record_mean_gain": 0.013750455499894877,
+    "record_bootstrap_95": [
+      0.002740607690772028,
+      0.024745250568268318
+    ],
+    "record_fold_gains": [
+      0.00874792789502632,
+      0.01328518663156475,
+      0.01921825197309368
+    ],
+    "date_macro_score_gain": 0.01189663109472583,
+    "bootstrap_replicates": 10000,
+    "seed": 20261103,
+    "uncertainty_unit": "record; shared participants are unknown, so not a subject-level confidence interval"
+  },
+  "final_inner_selection": {
+    "id": "filterbank_record_C10",
+    "config": {
+      "id": "filterbank_record_C10",
+      "features": "filterbank",
+      "C": 10,
+      "record_weight": true
+    },
+    "inner_score": 0.6180440495222651,
+    "threshold": 0.45999999999999996,
+    "seconds": 6.225277400022605,
+    "seed": 20261103,
+    "source_manifest": "experiments/round2/run_manifest.json",
+    "split_file": "experiments\\round2\\final_selection\\inner_splits.json",
+    "input_features": 125,
+    "classifier_parameters": 126,
+    "checkpoints": [
+      "experiments\\round2\\final_selection\\filterbank_record_C10_inner0.joblib",
+      "experiments\\round2\\final_selection\\filterbank_record_C10_inner1.joblib",
+      "experiments\\round2\\final_selection\\filterbank_record_C10_inner2.joblib"
+    ]
+  },
+  "executed": {
+    "candidate_inner_searches": 152,
+    "inner_fits": 456,
+    "outer_fits": 14,
+    "final_fit": 1,
+    "total_fits": 471,
+    "inner_fit_and_prediction_seconds": 230.27079759992193
+  },
+  "original_submission": {
+    "path": "submission_20261103.zip",
+    "sha256": "f842bc85ce379645abe49e08063d098e549e58fe34e021eef46fdb5a5ecf762a",
+    "bytes": 190225
+  },
+  "limitations": [
+    "Development data had been studied previously; this is not a new independent test set.",
+    "No verified participant, electrode or device metadata; no subject-wise generalization claim.",
+    "Acquisition date is an imperfect group proxy, never an identity or input feature.",
+    "Record bootstrap cannot account for unknown shared participants.",
+    "Foundation-model corpus overlap with this competition cannot be independently excluded.",
+    "Only the fixed normalized-input SingLEM probe was tested; no universal conclusion about the pretrained model."
+  ]
+}

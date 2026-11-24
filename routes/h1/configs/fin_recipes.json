@@ -1,0 +1,167 @@
+{
+ "L1": {
+  "note": "LightGBM only: rank-vs-reference member + strict band-pass/notch member",
+  "members": [
+   {
+    "view": "rank",
+    "train_orders": "aug",
+    "draws": 8,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "weight": 0.75
+   },
+   {
+    "view": "abs",
+    "bpn": true,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "lr": true,
+    "weight": 0.25
+   }
+  ]
+ },
+ "H1": {
+  "note": "order-augmented: rank LightGBM 0.2 + strict band-pass/notch LightGBM+LR 0.1 + two hybrid networks (z vs reference; waveform base / band-pass+notch) 0.35 each",
+  "members": [
+   {
+    "view": "rank",
+    "train_orders": "aug",
+    "draws": 12,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "weight": 0.2
+   },
+   {
+    "view": "abs",
+    "bpn": true,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "lr": true,
+    "weight": 0.1
+   },
+   {
+    "view": "hybrid",
+    "source": "hybfin_base_aug",
+    "wave": "base",
+    "n_nets": 3,
+    "weight": 0.35
+   },
+   {
+    "view": "hybrid",
+    "source": "hybfin_bpn_aug",
+    "wave": "bpn",
+    "n_nets": 3,
+    "weight": 0.35
+   }
+  ]
+ },
+ "H2": {
+  "note": "H1 with LightGBM members trained on labels shifted by 30 s (as the networks)",
+  "members": [
+   {
+    "view": "rank",
+    "train_orders": "aug",
+    "draws": 12,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "weight": 0.2,
+    "lag": 30
+   },
+   {
+    "view": "abs",
+    "bpn": true,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "lr": true,
+    "weight": 0.1,
+    "lag": 30
+   },
+   {
+    "view": "hybrid",
+    "source": "hybfin_base_aug",
+    "wave": "base",
+    "n_nets": 3,
+    "weight": 0.35
+   },
+   {
+    "view": "hybrid",
+    "source": "hybfin_bpn_aug",
+    "wave": "bpn",
+    "n_nets": 3,
+    "weight": 0.35
+   }
+  ]
+ },
+ "H2x5": {
+  "note": "H2 for the final export: 5 network seeds per hybrid member (experiments/hybfin_*_aug5/foldall)",
+  "members": [
+   {
+    "view": "rank",
+    "train_orders": "aug",
+    "draws": 12,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "weight": 0.2,
+    "lag": 30
+   },
+   {
+    "view": "abs",
+    "bpn": true,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "lr": true,
+    "weight": 0.1,
+    "lag": 30
+   },
+   {
+    "view": "hybrid",
+    "source": "hybfin_base_aug5",
+    "wave": "base",
+    "n_nets": 5,
+    "weight": 0.35
+   },
+   {
+    "view": "hybrid",
+    "source": "hybfin_bpn_aug5",
+    "wave": "bpn",
+    "n_nets": 5,
+    "weight": 0.35
+   }
+  ]
+ },
+ "H1x5": {
+  "note": "H1 for the final export: 5 network seeds per hybrid member (experiments/hybfin_*_aug5/foldall)",
+  "members": [
+   {
+    "view": "rank",
+    "train_orders": "aug",
+    "draws": 12,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "weight": 0.2
+   },
+   {
+    "view": "abs",
+    "bpn": true,
+    "params": "configs/lgb_order_best_w62.json",
+    "seeds": 3,
+    "lr": true,
+    "weight": 0.1
+   },
+   {
+    "view": "hybrid",
+    "source": "hybfin_base_aug5",
+    "wave": "base",
+    "n_nets": 5,
+    "weight": 0.35
+   },
+   {
+    "view": "hybrid",
+    "source": "hybfin_bpn_aug5",
+    "wave": "bpn",
+    "n_nets": 5,
+    "weight": 0.35
+   }
+  ]
+ }
+}

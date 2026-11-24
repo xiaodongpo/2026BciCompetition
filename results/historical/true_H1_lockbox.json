@@ -1,0 +1,14 @@
+{
+  "model": "checkpoints/fin/H1_dev",
+  "recs": "lockbox",
+  "seeds": "14,15,16",
+  "n_rec": 11,
+  "auc": 0.7547002005156517,
+  "acc": 0.6710997010920011,
+  "bacc": 0.6724746926870001,
+  "final": 0.7128999508038264,
+  "ms_per_predict": 14.634407400210481,
+  "filter_s_per_rec": 0.14865552417838693,
+  "source_sha256": "7c329527b3d948da121343be9fccd97b7beec0b3fd1ac259d58e3733521d631a",
+  "historical_only": true
+}

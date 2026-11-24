@@ -1,0 +1,12 @@
+{
+  "text_files_checked": 3401,
+  "over_2mb_text_files_skipped": 215,
+  "locations_flagged": 286,
+  "patterns_by_kind": {
+    "personal_windows_path": 280,
+    "private_host": 2,
+    "remote_connection_configuration": 4
+  },
+  "scope": "Read-only selected text extensions outside data, caches, environments and junctions. Regex flags require context review; not proof that every flagged string is a secret. Internal logs, metadata and remote configs are excluded from publication.",
+  "matched_values_disclosed": false
+}

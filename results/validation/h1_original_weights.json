@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "synthetic_input": true,
+  "order_independence": true,
+  "reference_order_independence": true,
+  "cache_isolation": true,
+  "filter_future_invariance": true,
+  "filter_unit_dc_gain": true,
+  "neutral_bad_window": true,
+  "reference_fallback": true,
+  "model_files_unchanged": true,
+  "scores": [
+    0.09770391571833922,
+    0.10593356625721756,
+    0.11645447305310769,
+    0.12828373362003154
+  ],
+  "competition_metrics_reproduced": false,
+  "training_losses": null,
+  "existing_weights": true,
+  "recipe": "H1x5"
+}

@@ -1,0 +1,308 @@
+{
+  "round": 6,
+  "seed": 20261104,
+  "development": [
+    "002",
+    "003",
+    "004",
+    "005",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "014",
+    "015",
+    "016",
+    "017",
+    "019",
+    "020",
+    "021",
+    "022",
+    "023",
+    "024",
+    "025",
+    "027",
+    "028",
+    "029",
+    "031",
+    "034",
+    "035",
+    "036",
+    "037",
+    "038",
+    "040",
+    "041",
+    "043",
+    "044",
+    "045",
+    "046",
+    "047",
+    "049",
+    "051",
+    "053",
+    "054",
+    "055",
+    "056",
+    "057",
+    "059"
+  ],
+  "excluded_previous_holdout": [
+    "001",
+    "006",
+    "013",
+    "018",
+    "026",
+    "030",
+    "039",
+    "042",
+    "048",
+    "050",
+    "052",
+    "058"
+  ],
+  "outer_folds": [
+    [
+      "002",
+      "005",
+      "008",
+      "010",
+      "014",
+      "015",
+      "034",
+      "035",
+      "043",
+      "047",
+      "051",
+      "053",
+      "056",
+      "057",
+      "059"
+    ],
+    [
+      "004",
+      "007",
+      "011",
+      "012",
+      "017",
+      "020",
+      "023",
+      "024",
+      "027",
+      "029",
+      "031",
+      "044",
+      "045",
+      "049",
+      "055"
+    ],
+    [
+      "003",
+      "009",
+      "016",
+      "019",
+      "021",
+      "022",
+      "025",
+      "028",
+      "036",
+      "037",
+      "038",
+      "040",
+      "041",
+      "046",
+      "054"
+    ]
+  ],
+  "inner_salt": "round6-inner-20261104-",
+  "inner_folds": 3,
+  "primary": "All 2-second-grid windows with 1500 valid raw samples and official endpoint label. Do not exclude mixed or early windows from evaluation.",
+  "training_scope": "45 development records. Event timing only in offline labels/weights/diagnostics. First phase is not a known transition.",
+  "lr_axes": [
+    {
+      "id": "pure_reference",
+      "kind": "pure",
+      "T_task": 0,
+      "T_relax": 0
+    },
+    {
+      "id": "full_hard",
+      "kind": "hard",
+      "T_task": 0,
+      "T_relax": 0
+    },
+    {
+      "id": "drop_task_6",
+      "kind": "drop",
+      "T_task": 6,
+      "T_relax": 0
+    },
+    {
+      "id": "drop_task_15",
+      "kind": "drop",
+      "T_task": 15,
+      "T_relax": 0
+    },
+    {
+      "id": "drop_task_30",
+      "kind": "drop",
+      "T_task": 30,
+      "T_relax": 0
+    },
+    {
+      "id": "drop_relax_6",
+      "kind": "drop",
+      "T_task": 0,
+      "T_relax": 6
+    },
+    {
+      "id": "drop_relax_15",
+      "kind": "drop",
+      "T_task": 0,
+      "T_relax": 15
+    },
+    {
+      "id": "drop_relax_30",
+      "kind": "drop",
+      "T_task": 0,
+      "T_relax": 30
+    }
+  ],
+  "lr_joint_rule": "Choose T_task and T_relax separately among 0/6/15/30 by three-fold inner full-validation score; then evaluate 14 predeclared joint/weight/soft candidates on the same inner folds. No outer metrics affect this process.",
+  "lr_addition_template": [
+    {
+      "id": "drop_independent",
+      "kind": "drop",
+      "T_task": 15,
+      "T_relax": 30
+    },
+    {
+      "id": "drop_same15",
+      "kind": "drop",
+      "T_task": 15,
+      "T_relax": 15
+    },
+    {
+      "id": "drop_task15_relax30",
+      "kind": "drop",
+      "T_task": 15,
+      "T_relax": 30
+    },
+    {
+      "id": "drop_task30_relax15",
+      "kind": "drop",
+      "T_task": 30,
+      "T_relax": 15
+    },
+    {
+      "id": "weight_task15",
+      "kind": "weight",
+      "T_task": 15,
+      "T_relax": 0,
+      "min_task": 0.25,
+      "min_relax": 0.25
+    },
+    {
+      "id": "weight_relax15",
+      "kind": "weight",
+      "T_task": 0,
+      "T_relax": 15,
+      "min_task": 0.25,
+      "min_relax": 0.25
+    },
+    {
+      "id": "weight_same15",
+      "kind": "weight",
+      "T_task": 15,
+      "T_relax": 15,
+      "min_task": 0.25,
+      "min_relax": 0.25
+    },
+    {
+      "id": "weight_independent",
+      "kind": "weight",
+      "T_task": 15,
+      "T_relax": 30,
+      "min_task": 0.25,
+      "min_relax": 0.25
+    },
+    {
+      "id": "weight_task_low",
+      "kind": "weight",
+      "T_task": 15,
+      "T_relax": 15,
+      "min_task": 0.25,
+      "min_relax": 0.5
+    },
+    {
+      "id": "weight_relax_low",
+      "kind": "weight",
+      "T_task": 15,
+      "T_relax": 15,
+      "min_task": 0.5,
+      "min_relax": 0.25
+    },
+    {
+      "id": "soft_task15",
+      "kind": "soft",
+      "T_task": 15,
+      "T_relax": 0
+    },
+    {
+      "id": "soft_relax15",
+      "kind": "soft",
+      "T_task": 0,
+      "T_relax": 15
+    },
+    {
+      "id": "soft_same15",
+      "kind": "soft",
+      "T_task": 15,
+      "T_relax": 15
+    },
+    {
+      "id": "soft_independent",
+      "kind": "soft",
+      "T_task": 15,
+      "T_relax": 30
+    }
+  ],
+  "lr": {
+    "features": "unchanged round2 filterbank 125",
+    "C": 10,
+    "threshold": 0.46,
+    "selection": "record macro (bACC+AUC)/2",
+    "record_class_weights": true
+  },
+  "neural": {
+    "model": "existing SmallCNN width16 dropout0.25 raw1500",
+    "max_epochs": 150,
+    "early_stop_patience": 25,
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "batch": 128,
+    "clip_norm": 1.0,
+    "scheduler": "ReduceLROnPlateau factor0.5 patience8 min_lr1e-5; hard validation BCE, inner records only",
+    "conditions": [
+      "legacy6_pure",
+      "long150_pure",
+      "long150_full",
+      "scheduled150_full",
+      "scheduled150_transition",
+      "scheduled150_curriculum"
+    ],
+    "original_control": "legacy6 and long150_pure retain pure training windows, original global pos_weight and constant LR. Only training duration / inner checkpoint selection differs.",
+    "other_control": "long150_full versus scheduled150_full isolates scheduler; use identical global pos_weight and train rows. transition/curriculum add record-class-balanced supervision, disclosed as a strategy bundle.",
+    "epoch_selection": "One fixed whole-record inner validation split (one third of outer-training records), all valid labeled windows retained. Select best record composite; early stop on no score improvement. Refit outer training for selected epoch with fixed LR schedule replay, never monitor outer validation.",
+    "curriculum": "stable first 15 epochs (T_task=T_relax=30), linear introduction epochs16-30, full supervision thereafter; best epoch and early stopping eligible only from epoch31.",
+    "checkpoint": "Save best and last per epoch, optimizer/scheduler/RNG, training and validation loss and full record bACC/AUC. Save epoch6 snapshot for long-run control.",
+    "threshold": 0.5
+  },
+  "evaluation": "All fixed ablations reported on identical outer records. LR selected procedure has record/date nested validation. Neural conditions use record outer folds and internal epoch tuning; no date-generalization claim for neural models without subsequent date tests.",
+  "promotion": "Record paired-bootstrap composite gain lower 95% bound >0; all 3 record outer-fold gains >0; date macro composite and record macro bACC nondecreasing.",
+  "neural_promotion": "Must first pass record bootstrap, all record folds and bACC gate against fixed LR; only then run nested date confirmation and full-package verification. Otherwise research only.",
+  "diagnostics": "Baseline cross-fitted predictions; bins 0/2/4/6/10/15/20/30/60/inf, initial phases separate, pure/mixed separate; trial then record averaging; paired record bootstrap for directional early-versus-stable differences. No individual physiological transition time forced.",
+  "future": "No transition-aware inference or external event input. No paid resources. Preserve old archives.",
+  "limitations": "Previously used development data; participant/electrode/device unavailable; no untouched independent evaluation."
+}

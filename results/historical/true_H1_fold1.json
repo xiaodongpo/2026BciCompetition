@@ -1,0 +1,14 @@
+{
+  "model": "checkpoints/fin/H1_fold1",
+  "recs": "fold1",
+  "seeds": "14,15,16",
+  "n_rec": 9,
+  "auc": 0.6605033246503214,
+  "acc": 0.6008527516891436,
+  "bacc": 0.6013326335060427,
+  "final": 0.6306780381697326,
+  "ms_per_predict": 16.34553823691893,
+  "filter_s_per_rec": 0.10278555410978799,
+  "source_sha256": "0f32dd4dd2f7a2278e8a9b6b90f375c4f395920eb4070d49df0b849d5b08b740",
+  "historical_only": true
+}

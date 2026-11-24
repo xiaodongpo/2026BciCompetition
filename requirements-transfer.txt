@@ -1,0 +1,4 @@
+# Optional historical BIOT/SingLEM experiments. No pretrained weights are downloaded.
+-r requirements.txt
+einops==0.8.1
+linear-attention-transformer==0.19.1

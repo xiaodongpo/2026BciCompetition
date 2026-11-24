@@ -1,0 +1,5 @@
+# Preserve published bytes so SHA-256 inventories survive checkout on any OS.
+# Python and Markdown accept the original LF/CRLF files without conversion.
+* -text
+* whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.py diff=python

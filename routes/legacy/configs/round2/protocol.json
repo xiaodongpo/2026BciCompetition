@@ -1,0 +1,250 @@
+{
+  "round": 2,
+  "seed": 20261103,
+  "development": [
+    "002",
+    "003",
+    "004",
+    "005",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "014",
+    "015",
+    "016",
+    "017",
+    "019",
+    "020",
+    "021",
+    "022",
+    "023",
+    "024",
+    "025",
+    "027",
+    "028",
+    "029",
+    "031",
+    "034",
+    "035",
+    "036",
+    "037",
+    "038",
+    "040",
+    "041",
+    "043",
+    "044",
+    "045",
+    "046",
+    "047",
+    "049",
+    "051",
+    "053",
+    "054",
+    "055",
+    "056",
+    "057",
+    "059"
+  ],
+  "excluded_previous_holdout": [
+    "001",
+    "006",
+    "013",
+    "018",
+    "026",
+    "030",
+    "039",
+    "042",
+    "048",
+    "050",
+    "052",
+    "058"
+  ],
+  "outer_folds": [
+    [
+      "002",
+      "003",
+      "005",
+      "008",
+      "011",
+      "015",
+      "017",
+      "020",
+      "025",
+      "028",
+      "036",
+      "044",
+      "045",
+      "053",
+      "055"
+    ],
+    [
+      "007",
+      "009",
+      "014",
+      "021",
+      "023",
+      "024",
+      "027",
+      "031",
+      "034",
+      "038",
+      "040",
+      "041",
+      "047",
+      "051",
+      "059"
+    ],
+    [
+      "004",
+      "010",
+      "012",
+      "016",
+      "019",
+      "022",
+      "029",
+      "035",
+      "037",
+      "043",
+      "046",
+      "049",
+      "054",
+      "056",
+      "057"
+    ]
+  ],
+  "inner_folds": 3,
+  "inner_split_salt": "round2-inner-",
+  "candidates": [
+    {
+      "id": "legacy_C10",
+      "features": "legacy",
+      "C": 10,
+      "record_weight": false
+    },
+    {
+      "id": "legacy_record_C0.1",
+      "features": "legacy",
+      "C": 0.1,
+      "record_weight": true
+    },
+    {
+      "id": "legacy_record_C1",
+      "features": "legacy",
+      "C": 1,
+      "record_weight": true
+    },
+    {
+      "id": "legacy_record_C10",
+      "features": "legacy",
+      "C": 10,
+      "record_weight": true
+    },
+    {
+      "id": "robust_record_C0.1",
+      "features": "robust",
+      "C": 0.1,
+      "record_weight": true
+    },
+    {
+      "id": "robust_record_C1",
+      "features": "robust",
+      "C": 1,
+      "record_weight": true
+    },
+    {
+      "id": "robust_record_C10",
+      "features": "robust",
+      "C": 10,
+      "record_weight": true
+    },
+    {
+      "id": "filterbank_record_C0.1",
+      "features": "filterbank",
+      "C": 0.1,
+      "record_weight": true
+    },
+    {
+      "id": "filterbank_record_C1",
+      "features": "filterbank",
+      "C": 1,
+      "record_weight": true
+    },
+    {
+      "id": "filterbank_record_C10",
+      "features": "filterbank",
+      "C": 10,
+      "record_weight": true
+    },
+    {
+      "id": "singlem_record_C0.1",
+      "features": "singlem",
+      "C": 0.1,
+      "record_weight": true
+    },
+    {
+      "id": "singlem_record_C1",
+      "features": "singlem",
+      "C": 1,
+      "record_weight": true
+    },
+    {
+      "id": "singlem_record_C10",
+      "features": "singlem",
+      "C": 10,
+      "record_weight": true
+    },
+    {
+      "id": "singlem_random_record_C0.1",
+      "features": "singlem_random",
+      "C": 0.1,
+      "record_weight": true
+    },
+    {
+      "id": "singlem_random_record_C1",
+      "features": "singlem_random",
+      "C": 1,
+      "record_weight": true
+    },
+    {
+      "id": "singlem_random_record_C10",
+      "features": "singlem_random",
+      "C": 10,
+      "record_weight": true
+    },
+    {
+      "id": "fusion_record_C0.1",
+      "features": "fusion",
+      "C": 0.1,
+      "record_weight": true
+    },
+    {
+      "id": "fusion_record_C1",
+      "features": "fusion",
+      "C": 1,
+      "record_weight": true
+    },
+    {
+      "id": "fusion_record_C10",
+      "features": "fusion",
+      "C": 10,
+      "record_weight": true
+    }
+  ],
+  "fixed_reference": {
+    "features": "legacy",
+    "C": 10,
+    "record_weight": false,
+    "threshold": 0.49
+  },
+  "selection": "Mean of per-record bACC@0.5 and per-record AUC from inner OOF; deterministic candidate order breaks ties",
+  "threshold": "Inner OOF record-and-class-balanced bACC on 0.35:0.01:0.65; nearest 0.5 wins ties",
+  "date_stress": "Nested leave-one-acquisition-date-out on the same 45 development records; dates are groups, never subject/device identity or input features",
+  "promotion": "Promote only if record-paired bootstrap 95% lower bound of mean(bACC,AUC) gain > 0, all 3 outer folds improve that score, and date-stress mean score does not decrease",
+  "limitations": "Previously studied development records: nested CV prevents current-fold tuning leakage but cannot undo prior adaptive research. No new pristine holdout and no subject-generalization claim.",
+  "raw_support_samples": 1500,
+  "fs": 250,
+  "stride_samples": 500
+}

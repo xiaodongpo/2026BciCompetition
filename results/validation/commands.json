@@ -1,0 +1,61 @@
+[
+  {
+    "check": "h1_training_help",
+    "status": "PASS",
+    "returncode": 0,
+    "seconds": 4.163590000011027
+  },
+  {
+    "check": "h1_export_help",
+    "status": "PASS",
+    "returncode": 0,
+    "seconds": 2.246317800018005
+  },
+  {
+    "check": "h1_evaluation_help",
+    "status": "PASS",
+    "returncode": 0,
+    "seconds": 0.2271560999797657
+  },
+  {
+    "check": "h1_solution_cli_help",
+    "status": "PASS",
+    "returncode": 0,
+    "seconds": 2.101760599995032
+  },
+  {
+    "check": "r0_inference_demo",
+    "status": "PASS",
+    "returncode": 0,
+    "seconds": 5.190872600011062
+  },
+  {
+    "check": "metric_fixture",
+    "status": "PASS",
+    "returncode": 0,
+    "seconds": 2.1196129000163637
+  },
+  {
+    "check": "h1_bundle_hashes",
+    "status": "PASS",
+    "returncode": 0,
+    "seconds": 0.21977540000807494
+  },
+  {
+    "check": "r0_bundle_hashes",
+    "status": "PASS",
+    "returncode": 0,
+    "seconds": 0.13631839997833595
+  },
+  {
+    "check": "d2_bundle_hashes",
+    "status": "PASS",
+    "returncode": 0,
+    "seconds": 0.18577250000089407
+  },
+  {
+    "check": "r0_cli_matches_decoder",
+    "status": "PASS",
+    "decisions": 32
+  }
+]

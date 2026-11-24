@@ -1,0 +1,46 @@
+{
+  "id": "fusion_C10",
+  "config": {
+    "id": "fusion_C10",
+    "features": "fusion",
+    "model": "lr",
+    "C": 10
+  },
+  "inner_score": 0.6296549682503618,
+  "threshold": 0.46,
+  "seconds": 6.41532680002274,
+  "seed": 20261104,
+  "fits": [
+    {
+      "fold": 0,
+      "seconds": 1.867504000023473,
+      "structure": {
+        "input_features": 145,
+        "classifier_parameters": 146
+      },
+      "checkpoint": "experiments\\round5\\final_selection\\fusion_C10_inner0.joblib",
+      "checkpoint_sha256": "0f1ecd53398b5a353cc9e51eb87cdf8d10ee389c30d1f60bddf29b4b3101dc37"
+    },
+    {
+      "fold": 1,
+      "seconds": 1.9164184000110254,
+      "structure": {
+        "input_features": 145,
+        "classifier_parameters": 146
+      },
+      "checkpoint": "experiments\\round5\\final_selection\\fusion_C10_inner1.joblib",
+      "checkpoint_sha256": "82ad38bc34605dcdd65e0fc9ebc9913c9f02b9ff20c4727e1bdfabf253628415"
+    },
+    {
+      "fold": 2,
+      "seconds": 2.1752943999599665,
+      "structure": {
+        "input_features": 145,
+        "classifier_parameters": 146
+      },
+      "checkpoint": "experiments\\round5\\final_selection\\fusion_C10_inner2.joblib",
+      "checkpoint_sha256": "31455d1000944ec448b5a0bd269efbecccba5751d619d8ec32cdc2e01777430b"
+    }
+  ],
+  "source_manifest": "experiments/round5/run_manifest.json"
+}

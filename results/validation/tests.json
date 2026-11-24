@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "environment": "new isolated Windows venv",
+  "tests": 14,
+  "seconds": 76.048,
+  "failures": 0,
+  "errors": 0,
+  "test_cases": [
+    "test_r0_checkpoint_reload_and_direction",
+    "test_r0_chunk_invariance[1]",
+    "test_r0_chunk_invariance[137]",
+    "test_r0_chunk_invariance[5000]",
+    "test_r0_chunk_invariance[8750]",
+    "test_r0_future_perturbation",
+    "test_r0_invalid_mask_and_reset",
+    "test_r0_boundary_and_frozen_signal_support",
+    "test_metrics_direction_and_accuracy_difference",
+    "test_frozen_split_disjointness",
+    "test_legacy_suite",
+    "test_d2_train_reload_and_stream",
+    "test_r0_formal_training_entry_smoke",
+    "test_h1_training_export_and_protocol"
+  ],
+  "original_junit_sha256": "2593136a6850326fa1783fcb31dbd625f87c07f72a321f33b72bbfe2d1b8c869",
+  "original_log_sha256": "75eb08f5ee56602cf851da7c3a4ffa1727dc59b01dc79a3210b80ba3c1aa045d",
+  "nested_legacy_suite": true,
+  "competition_metrics_reproduced": false
+}

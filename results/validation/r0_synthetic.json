@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "cnn_seeds": 3,
+  "optimizer_steps_per_seed": 1,
+  "tree_rounds": 2,
+  "losses": [
+    0.7781558632850647,
+    0.6844577789306641,
+    0.6984488368034363
+  ],
+  "reload_decisions": 32,
+  "feature_dimensions": 165,
+  "competition_metrics_reproduced": false
+}

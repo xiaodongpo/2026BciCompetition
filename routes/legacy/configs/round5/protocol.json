@@ -1,0 +1,193 @@
+{
+  "round": 5,
+  "seed": 20261104,
+  "development": [
+    "002",
+    "003",
+    "004",
+    "005",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "014",
+    "015",
+    "016",
+    "017",
+    "019",
+    "020",
+    "021",
+    "022",
+    "023",
+    "024",
+    "025",
+    "027",
+    "028",
+    "029",
+    "031",
+    "034",
+    "035",
+    "036",
+    "037",
+    "038",
+    "040",
+    "041",
+    "043",
+    "044",
+    "045",
+    "046",
+    "047",
+    "049",
+    "051",
+    "053",
+    "054",
+    "055",
+    "056",
+    "057",
+    "059"
+  ],
+  "excluded_previous_holdout": [
+    "001",
+    "006",
+    "013",
+    "018",
+    "026",
+    "030",
+    "039",
+    "042",
+    "048",
+    "050",
+    "052",
+    "058"
+  ],
+  "outer_folds": [
+    [
+      "003",
+      "008",
+      "010",
+      "019",
+      "020",
+      "027",
+      "034",
+      "035",
+      "036",
+      "040",
+      "047",
+      "051",
+      "054",
+      "055",
+      "057"
+    ],
+    [
+      "004",
+      "007",
+      "009",
+      "012",
+      "014",
+      "015",
+      "016",
+      "021",
+      "022",
+      "023",
+      "028",
+      "045",
+      "049",
+      "053",
+      "056"
+    ],
+    [
+      "002",
+      "005",
+      "011",
+      "017",
+      "024",
+      "025",
+      "029",
+      "031",
+      "037",
+      "038",
+      "041",
+      "043",
+      "044",
+      "046",
+      "059"
+    ]
+  ],
+  "inner_split_salt": "round5-inner-20261104-",
+  "candidates": [
+    {
+      "id": "base_C1",
+      "features": "base",
+      "model": "lr",
+      "C": 1
+    },
+    {
+      "id": "base_C10",
+      "features": "base",
+      "model": "lr",
+      "C": 10
+    },
+    {
+      "id": "ordinal_C0.1",
+      "features": "ordinal",
+      "model": "lr",
+      "C": 0.1
+    },
+    {
+      "id": "ordinal_C1",
+      "features": "ordinal",
+      "model": "lr",
+      "C": 1
+    },
+    {
+      "id": "ordinal_C10",
+      "features": "ordinal",
+      "model": "lr",
+      "C": 10
+    },
+    {
+      "id": "fusion_C0.1",
+      "features": "fusion",
+      "model": "lr",
+      "C": 0.1
+    },
+    {
+      "id": "fusion_C1",
+      "features": "fusion",
+      "model": "lr",
+      "C": 1
+    },
+    {
+      "id": "fusion_C10",
+      "features": "fusion",
+      "model": "lr",
+      "C": 10
+    }
+  ],
+  "fixed_reference": {
+    "id": "base_C10",
+    "features": "base",
+    "model": "lr",
+    "C": 10,
+    "threshold": 0.46
+  },
+  "hypothesis": "Permutation and variance-weighted permutation entropies may complement the established spectral/covariance features.",
+  "representations": {
+    "base": 125,
+    "ordinal": 20,
+    "fusion": 145
+  },
+  "ordinal": "Unchanged within-window 1-45Hz FIR and robust clipping; embedding orders 3/4, delays 1/2/4/8/16 at 250Hz; PE and variance-weighted PE normalized by log(m!). Exact-tie vectors excluded, all-tied returns zero. No fitted feature parameters.",
+  "selection": "3 inner OOF folds, record-macro (bACC@0.46+AUC)/2; deterministic candidate order breaks ties.",
+  "threshold": 0.46,
+  "weighting": "Same equal total weight per record/class as round two; scaler fitted on training rows only.",
+  "date_stress": "Nested leave-one-acquisition-date-out; dates are grouping variables only.",
+  "promotion": "Record paired-bootstrap composite gain lower 95% bound >0; all 3 record outer-fold gains >0; date macro composite and record macro bACC nondecreasing.",
+  "raw_support_samples": 1500,
+  "fs": 250,
+  "stride_samples": 500,
+  "supplemental": "After lock: verify all saved representation adapters; paired time-reversal sensitivity on every 32nd dev window, no selection from this diagnostic. New package and pure-phase continuous-stream comparison only if promotion passes.",
+  "limitations": "Previously studied development records; no new pristine holdout. Participants/electrodes/devices unknown. Record bootstrap is not participant-level inference."
+}

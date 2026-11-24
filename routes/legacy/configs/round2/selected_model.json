@@ -1,0 +1,22 @@
+{
+  "id": "filterbank_record_C10",
+  "config": {
+    "id": "filterbank_record_C10",
+    "features": "filterbank",
+    "C": 10,
+    "record_weight": true
+  },
+  "inner_score": 0.6180440495222651,
+  "threshold": 0.45999999999999996,
+  "seconds": 6.225277400022605,
+  "seed": 20261103,
+  "source_manifest": "experiments/round2/run_manifest.json",
+  "split_file": "experiments\\round2\\final_selection\\inner_splits.json",
+  "input_features": 125,
+  "classifier_parameters": 126,
+  "checkpoints": [
+    "experiments\\round2\\final_selection\\filterbank_record_C10_inner0.joblib",
+    "experiments\\round2\\final_selection\\filterbank_record_C10_inner1.joblib",
+    "experiments\\round2\\final_selection\\filterbank_record_C10_inner2.joblib"
+  ]
+}

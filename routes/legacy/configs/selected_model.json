@@ -1,0 +1,12 @@
+{
+  "experiment_id": "model-lr_seconds-6_C-10_features-fir",
+  "config": {
+    "model": "lr",
+    "seconds": 6,
+    "C": 10,
+    "features": "fir"
+  },
+  "threshold": 0.49,
+  "selection": "mean of development OOF bACC@0.5 and AUC",
+  "source_sha256": "905d618acef844e6319e7119f5f4e5e6594333fe7a56ffeb9b162941e3d848b4"
+}

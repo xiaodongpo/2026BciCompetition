@@ -1,0 +1,20 @@
+{
+  "H1": {
+    "auc": 0.7103145904423777,
+    "acc": 0.6524452487717752,
+    "bacc": 0.6527640525534714,
+    "final": 0.6813799196070763,
+    "records": 46,
+    "aggregation": "record-weighted folds, each record averaged over reference seeds 14/15/16",
+    "historical_only": true
+  },
+  "H2": {
+    "auc": 0.7099130886901751,
+    "acc": 0.6523032330380196,
+    "bacc": 0.6525429746871597,
+    "final": 0.6811081608640973,
+    "records": 46,
+    "aggregation": "record-weighted folds, each record averaged over reference seeds 14/15/16",
+    "historical_only": true
+  }
+}

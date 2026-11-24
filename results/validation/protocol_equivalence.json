@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "seeds": [
+    0,
+    14,
+    15,
+    16,
+    42
+  ],
+  "samples": 450123,
+  "reference_and_window_arrays_exact": true,
+  "source": "original final submission helper compared with independently written release helper"
+}

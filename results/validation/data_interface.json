@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "route": "h1",
+  "records": 57,
+  "files": 114,
+  "data_read_only": true,
+  "checks": [
+    "one EEG channel",
+    "250 Hz within 1e-9 tolerance",
+    "filename UTC+0800 timestamp",
+    "event CSV schema",
+    "SHA-256 of every BDF and event CSV"
+  ],
+  "private_manifest_sha256": "e7d4956ecc475d6859a54aa04e506de86141215a3ea1ed5376c0e4af6d297871",
+  "not_tested": [
+    "independent participant identity",
+    "new holdout performance"
+  ]
+}
